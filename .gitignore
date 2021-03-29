@@ -72,5 +72,6 @@ crashlytics-build.properties
 
 # Custom
 /[Aa]ssets/Images
+/[Aa]ssets/Animations
 /[Aa]ssets/Sprites
 /[Aa]ssets/SoundS
