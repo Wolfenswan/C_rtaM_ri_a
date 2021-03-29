@@ -75,3 +75,5 @@ crashlytics-build.properties
 /[Aa]ssets/Animations
 /[Aa]ssets/Sprites
 /[Aa]ssets/SoundS
+/.vscode
+/Assets/TextMesh Pro
