@@ -10,6 +10,7 @@ TagManager:
   - HintText
   - PuzzlePiece
   - UIElement
+  - Cover1
   layers:
   - Default
   - TransparentFX
