@@ -45,7 +45,7 @@ public class CameraController : MonoBehaviour
         }
 
         // Panning under specific conditions
-        if (buttonDown || buttonHeld && !IsPointerOverUIElement() && !GameManager.DraggingPuzzlePiece)
+        if (buttonDown || buttonHeld && !IsPointerOverUIElement(cursorPos) && !GameManager.DraggingPuzzlePiece)
             PanCamera(buttonDown, buttonHeld, cursorWorldPos);
     }
 
@@ -68,11 +68,11 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    bool IsPointerOverUIElement() // CONSIDER might make a nice extension or utility function; passing array/list of strings?
+    bool IsPointerOverUIElement(Vector2 cursorPos) //* CONSIDER might make a nice extension or utility function; passing array/list of strings?
     // http://answers.unity.com/answers/1748972/view.html
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y); // ! TODO use cursorPos as argument
+        eventDataCurrentPosition.position = cursorPos; //! TODO use cursorPos as argument
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count(obj => obj.gameObject.tag == "UIElement") > 0;

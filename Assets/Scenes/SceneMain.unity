@@ -304,6 +304,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 1144849635}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -880,6 +884,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271630392}
   m_CullTransparentMesh: 1
+--- !u!1 &288373270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7279340481808441998, guid: 6c54a994b3b2c85408d125f481aba94f, type: 3}
+  m_PrefabInstance: {fileID: 7279340480926167729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &300192982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1016,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 1143604065}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1149,6 +1162,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 873679602}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1903,6 +1920,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 1612361138}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2358,6 +2379,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 945867487}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3003,6 +3028,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 834772721}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3149,6 +3178,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 1431141734}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3586,6 +3619,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 1747523047}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3845,8 +3882,8 @@ PrefabInstance:
         damaligen Menschen. Durchaus traute man ihnen zu, ein ganzes Schiff in den
         Abgrund ziehen zu k\xF6nnen und mit ihren riesigen R\xFCcken \"verschwindende
         Inseln\" zu bilden.\r\n\r\nAuch dieses Exemplar fiel einer solchen Verwechslung
-        zum Opfer. Aber kann man es den englischen Matrosen vorwerfen, es zwischen
-        Eisschollen und Seeungeheuern nicht ganz so genau zu nehmen?"
+        zum Opfer. Aber kann man den englischen Matrosen vorwerfen, es zwischen Eisschollen
+        und Seeungeheuern nicht ganz so genau zu nehmen?"
       objectReference: {fileID: 0}
     - target: {fileID: 7273425102407394024, guid: dd49ae871866e1745bac4853fb47dd19, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4191,6 +4228,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 27845425}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4804,6 +4845,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 2080188399}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4947,6 +4992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb517d015a8ac04a81b1c7c83b712c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _firstMapCover: {fileID: 288373270}
 --- !u!4 &1895847182
 Transform:
   m_ObjectHideFlags: 0
@@ -4988,6 +5034,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 2089367552}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5214,6 +5264,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 1174990558}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5749,6 +5803,10 @@ PrefabInstance:
       propertyPath: _defaultAlpha
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 28713795597347406, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
+      propertyPath: _assignedPiece
+      value: 
+      objectReference: {fileID: 376288547}
     - target: {fileID: 28713795597347407, guid: 6d30c58ac0b93e549ac580e1221f9ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5876,12 +5934,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5146542504711306441, guid: dd49ae871866e1745bac4853fb47dd19, type: 3}
       propertyPath: m_text
-      value: "D\xE4nen und Niederdeutsche standen seit jeher in einem tumulten Verh\xE4ltnis,
-        das ebenso von wechselseitigem Handel wie Kriegen gepr\xE4gt wurde. Ein \"netter
-        Spaziergang\" von der Nord- zur Ostsee war deshalb kaum m\xF6glich, ohne
-        an konfliktreiche Zeiten erinnert zu werden. Insbesondere in Form des Danewerks
-        bei Schleswig, das seit etwa dem siebtes Jahrhundert die K\xFCsten beider
-        Meere verband."
+      value: "Papst Paul III. belegte die Karte mit einem zehn Jahre w\xE4hrenden
+        Druckprivileg, das die Nachahmung und Weiterverbreitung verhinderte. Auch
+        die venezianische Regierung erlie\xDF eine entsprechende Verordnung. \n\nEntsprechend
+        prominent ist der wortreiche Text auf der Karte wiedergegeben. Doch egal
+        in welche Richtung man die Priviligien liest, von\r\nmenschenfressenden Riesenlangusten
+        ist in ihnen - oder um sie herum - nichts zu lesen."
       objectReference: {fileID: 0}
     - target: {fileID: 7273425102407394024, guid: dd49ae871866e1745bac4853fb47dd19, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6110,6 +6168,10 @@ PrefabInstance:
     - target: {fileID: 7279340481808441998, guid: 6c54a994b3b2c85408d125f481aba94f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279340481808441998, guid: 6c54a994b3b2c85408d125f481aba94f, type: 3}
+      propertyPath: m_TagString
+      value: Cover1
       objectReference: {fileID: 0}
     - target: {fileID: 7279340481808442096, guid: 6c54a994b3b2c85408d125f481aba94f, type: 3}
       propertyPath: _piecesToReveal.Array.size

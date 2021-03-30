@@ -5,16 +5,18 @@ public class GameManager : MonoBehaviour
 {
     public static bool DraggingPuzzlePiece{get; private set;}
 
+    [SerializeField] GameObject _firstMapCover;
+
     void Start() 
     {   
         // Safety in case the first cover was disabled for testing purposes and then forgotten to be reenabled
-        if (!GameObject.FindGameObjectWithTag("Cover1").activeSelf)
-            GameObject.FindGameObjectWithTag("Cover1").SetActive(true);
+        if (!_firstMapCover.activeSelf)
+            _firstMapCover.SetActive(true);
     }
 
     void OnEnable() 
     {
-        DragDrop.PuzzlePieceDraggedEvent += OnDraggingPieceEvent;
+        DragDrop.PuzzlePieceDraggedEvent += OnDraggingPieceEvent; //* CONSIDER: Move into DragDropController
     }
 
     void OnDisable() 

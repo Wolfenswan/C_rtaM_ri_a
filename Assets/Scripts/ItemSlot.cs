@@ -3,13 +3,13 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//! TODO Rename to SlotController for consistency
 public class ItemSlot : MonoBehaviour//, IDropHandler
 {
     [SerializeField] bool _activated;
-    [SerializeField] GameObject _piece;
+    [SerializeField] GameObject _assignedPiece;
     [SerializeField] CartaData _data;
-
-    [SerializeField] float _defaultAlpha = 0.1f;
+    [SerializeField] float _defaultAlpha = 0.1f; //* REMINDER - once we modify alpha through a difficulty setting, add an override
 
     CanvasGroup _cGroup;
     Animator _animator;
@@ -18,7 +18,7 @@ public class ItemSlot : MonoBehaviour//, IDropHandler
     Camera _cam;
     ClickBoxController _clickBox;
 
-    public GameObject Piece{get; private set;}
+    //public GameObject Piece{get; private set;}
 
     int _animHash = Animator.StringToHash("Animation");
 
@@ -30,7 +30,7 @@ public class ItemSlot : MonoBehaviour//, IDropHandler
         _image = GetComponent<Image>();
         _clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();
         _cGroup.alpha = _defaultAlpha;
-        _cam = Camera.main;
+        _cam = Camera.main; //! TODO refer to GameManager or assign via SerializeField
     }
 
     void Start() 
@@ -100,13 +100,13 @@ public class ItemSlot : MonoBehaviour//, IDropHandler
 
     void ClickBox_OnDropEvent(PointerEventData eventData)
     {
-        if (_piece != null && eventData.pointerDrag != null)
+        if (_assignedPiece != null && eventData.pointerDrag != null)
         {
             DragDrop puzzlepiece = eventData.pointerDrag.GetComponent<DragDrop>();
-            if (_piece == eventData.pointerDrag)
+            if (_assignedPiece == eventData.pointerDrag)
             {
                 puzzlepiece.DroppedOnSlot = true;  //Gibt dem ursprünglichen Objekt bekannt dass es erfolgreich gedropped wurde
-                _piece = null;
+                _assignedPiece = null;
                 //ActivateSlot();
                 StartCoroutine(FadeInSlot());
             } else

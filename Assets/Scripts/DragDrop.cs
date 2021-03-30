@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
-
+//! TODO Rename to XYController for consistency (DragDrop* or Piece*)
 public class DragDrop : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public static event Action<bool> PuzzlePieceDraggedEvent;
@@ -19,6 +19,7 @@ public class DragDrop : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     
     string _hintText;
     GameObject _hintBox; // ! TODO add dedicated HintBox Controller and move relevant methods there
+    CanvasGroup _hintBoxCanvasGroup;
     TextMeshProUGUI _hintBoxTextField;
 
     private void Awake()
@@ -34,6 +35,7 @@ public class DragDrop : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         
         _hintText = transform.Find("HintText").GetComponent<TextMeshProUGUI>().text;
         _hintBox = GameObject.FindGameObjectWithTag("HintBox").gameObject;
+        _hintBoxCanvasGroup = _hintBox.GetComponent<CanvasGroup>();
         _hintBoxTextField = _hintBox.transform.Find("HintText").GetComponent<TextMeshProUGUI>();
         //_hintBox.SetActive(false);
         //ToggleHint(false);
@@ -76,7 +78,7 @@ public class DragDrop : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void OnPointerClick(PointerEventData eventData)
     {   
-        var enableHint = !(_hintBoxTextField.text == _hintText) || (int) _hintBox.GetComponent<CanvasGroup>().alpha == 0;
+        var enableHint = !(_hintBoxTextField.text == _hintText) || (int) _hintBoxCanvasGroup.alpha == 0;
         ToggleHint(enableHint);
         //_hintBox.SetActive(!_hintBox.activeSelf);
         HintBoxToggled?.Invoke(_hintBox);
@@ -86,11 +88,11 @@ public class DragDrop : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     {
         if (enable)
         {
-            _hintBox.GetComponent<CanvasGroup>().alpha = 1;
+            _hintBoxCanvasGroup.alpha = 1;
             _hintBoxTextField.text = _hintText;
         } else
         {
-            _hintBox.GetComponent<CanvasGroup>().alpha = 0;
+            _hintBoxCanvasGroup.alpha = 0;
         }
     }
 
