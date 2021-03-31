@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4680290fce9d3454cad5ac67af295700, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6551613440
+    m_Localized: 'Hello!
+
+      
+
+      We''re happy that you are playing C_rta
+      M_ar_na.
+
+      
+
+      Simply navigate the map by clicking & dragging the
+      cursor. You can also zoom using the mouse wheel.
+
+      
+
+      To play,
+      you need to drag the images from the bottom bar to their correct place on the
+      map.
+
+      
+
+      When you click on one of the images, you will get a hint.
+      To hide this hint again simply click on the picture another time.
+
+
+      Have
+      fun!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1352335994880
+    m_Localized: "In the 16th century, the Hanseatic League had increasingly lost
+      its importance. Instead, the Scandinavian royal houses, Russian principalities
+      and England were now fighting for supremacy in the North and Baltic Seas.\r\n\r\nL\xFCbeck
+      in particular - the old center of the Hanseatic League - gradually lost its
+      position. But does this really mean that Lvbeca has to disappear from the map
+      altogether?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

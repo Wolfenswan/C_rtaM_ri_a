@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 28713795597347505}
   - component: {fileID: 28713795597347506}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: EmptySlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,13 +51,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 28713795597347400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864c29ba019bc314b9174ce8585fe814, type: 3}
+  m_Script: {fileID: 11500000, guid: 624ddd2d124936447a89eae421cbaa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _activated: 0
-  _piece: {fileID: 0}
+  _assignedPiece: {fileID: 0}
   _data: {fileID: 11400000, guid: 8845b226f90a1434093ace21d487403d, type: 2}
-  _defaultAlpha: 0.2
+  _defaultAlpha: 0.1
 --- !u!222 &28713795597347507
 CanvasRenderer:
   m_ObjectHideFlags: 0

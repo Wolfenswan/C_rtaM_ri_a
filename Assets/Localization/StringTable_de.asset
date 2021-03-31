@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 4680290fce9d3454cad5ac67af295700, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6551613440
+    m_Localized: "Hallo!\n\nSch\xF6n, dass du C_rta M_ar_na spielst.\n\nNavigiere
+      die Karte einfach durch Klicken & Ziehen des Cursors und zoome mit dem Mausrad.\n\nZum
+      Spielen musst du die Bilder aus der unteren Leiste an ihre richtige Stelle
+      in der Karte ziehen.\n\nWenn du auf eines der Bilder klickst, bekommst du einen
+      Hinweis. Klicke dann erneut auf das Bild, um die Karte wieder ganz zu sehen.\n\nViel
+      Spa\xDF!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1352335994880
+    m_Localized: "Im 16. Jahrhundert hatte die Hanse zunehmend an Bedeutung verloren.
+      Stattdessen stritten sich nun die skandinavischen K\xF6nigsh\xE4user, russische
+      F\xFCrstent\xFCmer und England um die Vorherrschaft in Nord- und Ostsee.\n\nGerade
+      L\xFCbeck - der alte Mittelpunkt der Hanse - verlor seine Stellung nach und
+      nach. Aber muss Lvbeca deswegen gleich ganz von der Karte verschwinden?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

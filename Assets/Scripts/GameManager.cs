@@ -3,9 +3,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool DraggingPuzzlePiece{get; private set;}
-
+    public static bool DraggingPuzzlePiece{get; private set;} = false;
+    
     [SerializeField] GameObject _firstMapCover;
+    public static Camera MainCamera{get; private set;}
+
+    void Awake() 
+    {
+        MainCamera = Camera.main; // Cached to avoid expensive lookups during runtime
+    }
 
     void Start() 
     {   
@@ -16,12 +22,12 @@ public class GameManager : MonoBehaviour
 
     void OnEnable() 
     {
-        DragDrop.PuzzlePieceDraggedEvent += OnDraggingPieceEvent; //* CONSIDER: Move into DragDropController
+        PuzzlePieceController.PuzzlePieceDraggedEvent += OnDraggingPieceEvent; //* CONSIDER: Move into CameraController
     }
 
     void OnDisable() 
     {
-        DragDrop.PuzzlePieceDraggedEvent -= OnDraggingPieceEvent;
+        PuzzlePieceController.PuzzlePieceDraggedEvent -= OnDraggingPieceEvent;
     }
 
     void Update() {
