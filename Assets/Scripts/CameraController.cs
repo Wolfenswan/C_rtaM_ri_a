@@ -37,12 +37,9 @@ public class CameraController : MonoBehaviour
         if (zoom != 0)
         {   
             var targetOrthoSize = Mathf.Clamp(_cam.orthographicSize + _data.MouseZoomSpeed * (-zoom), _zoomClamp.Min, _zoomClamp.Max);
-
             // Change camera position to cursor if we're zooming in
             // First check makes sure the camera wont move if min zoom value has been reached
             if (targetOrthoSize != _cam.orthographicSize && zoom > 0) MoveCameraToZoom(cursorWorldPos, zoom);
-
-            // Update the zoom
             _cam.orthographicSize = targetOrthoSize;
         }
 

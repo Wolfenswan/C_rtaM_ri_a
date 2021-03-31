@@ -4,17 +4,10 @@ using UnityEngine.EventSystems;
 
 public class ClickBoxController : MonoBehaviour, IPointerClickHandler, IDropHandler
 {
+    // The entire point of the controller is to provide a trigger-area independent of the sprite size used in the ImageComponent of PuzzleSlotController
+    
     public event Action OnPointerClickEvent;
     public event Action<PointerEventData> OnDropEvent;
-
-    // ItemSlot _slot;
-    // GameObject _piece;
-
-    // private void Start() 
-    // {
-    //     _slot = gameObject.GetComponentInParent<ItemSlot>();
-    //     _piece = _slot.Piece;
-    // }
 
     public void OnPointerClick(PointerEventData eventData) => OnPointerClickEvent?.Invoke();
 

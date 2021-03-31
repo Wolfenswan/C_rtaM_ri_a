@@ -11,7 +11,6 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
     [SerializeField] float _defaultAlpha = 0.1f; //* REMINDER - once we modify alpha through a difficulty setting, add an override
 
     #region fields
-    Camera _cam;
     ClickBoxController _clickBox;
     #endregion
     
@@ -19,7 +18,6 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
     CanvasGroup _cGroup;
     Animator _animator;
     AudioSource _audioSource;
-    Image _image;
     #endregion
 
     readonly int _animHash = Animator.StringToHash("Animation"); // Bit hacky: As there's only one animation for each piece, they've all been named "Animation" to make things faster to implement during the Game Jam. Now it just works.
@@ -30,7 +28,6 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
         
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
-        _image = GetComponent<Image>();
         _clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();
         
         _cGroup.alpha = _defaultAlpha;
@@ -38,7 +35,6 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
 
     void Start() 
     {   
-        _cam = GameManager.MainCamera;
         if (_activated) _cGroup.alpha = 1; // Only for debugging purposes as by default a slot should not be activated on Start
     }
 

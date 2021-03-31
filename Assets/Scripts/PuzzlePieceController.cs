@@ -23,9 +23,6 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     #region components
     CanvasGroup _canvasGroup;
     RectTransform _rectTransform;
-    // GameObject _hintBox; // // ! TODO add dedicated HintBox Controller and move relevant methods there
-    // CanvasGroup _hintBoxCanvasGroup;
-    // TextMeshProUGUI _hintBoxTextField;
     #endregion
 
     private void Awake()
@@ -36,15 +33,6 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
         _defaultPos = _rectTransform.anchoredPosition;
         _defaultPos.z = 0f;
         _canvas = GameObject.FindGameObjectWithTag("UICanvas").GetComponent<Canvas>();
-        //defaultPos = rectTransform.position;
-
-        //_hintText = transform.Find("HintText").GetComponent<TextMeshProUGUI>().text;
-        // _hintBox = GameObject.FindGameObjectWithTag("HintBox").gameObject;
-        // _hintBoxCanvasGroup = _hintBox.GetComponent<CanvasGroup>();
-        // _hintBoxTextField = _hintBox.transform.Find("HintText").GetComponent<TextMeshProUGUI>();
-    }
-
-    private void Start() {
     }
     
     private void OnEnable() 
