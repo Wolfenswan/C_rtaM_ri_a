@@ -29,8 +29,10 @@ public class CameraController : MonoBehaviour
         var cursorPos = Input.mousePosition;
         var cursorWorldPos = _cam.ScreenToWorldPoint(cursorPos);
 
-        var buttonDown = Input.GetMouseButtonDown(0); // CONSIDER - also allow middle/right mouse?
+        var buttonDown = Input.GetMouseButtonDown(0); //* CONSIDER - also allow middle/right mouse?
         var buttonHeld = Input.GetMouseButton(0);
+
+        // TODO Disable hintBox when navigating the main map
 
         if (zoom != 0)
         {   

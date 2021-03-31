@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573277cc6e2d785419de11491ab1c148, type: 3}
   m_Name: CartaData
   m_EditorClassIdentifier: 
-  MouseZoomSpeed: 0.4
+  MouseZoomSpeed: 0.6
   MouseZoomClampRange:
     Min: 10
-    Max: 20
+    Max: 30
   AlphaBlendSpeed: 0
   SlotFadeInTime: 1.5
   CoverFadeOutTime: 10

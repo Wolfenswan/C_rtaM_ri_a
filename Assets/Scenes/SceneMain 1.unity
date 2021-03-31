@@ -2864,6 +2864,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 68b8e0f26d1bf0143bc7f2e543cb8089, type: 3}
   - {fileID: 8300000, guid: 87eb9d5c865cde34cb98648fbd3a6e6c, type: 3}
   - {fileID: 8300000, guid: 5a46c6c828a27a54c83c61f94bcb8761, type: 3}
+  _startVolume: 0.549
 --- !u!1 &945867487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7273425103146806533, guid: dd49ae871866e1745bac4853fb47dd19, type: 3}

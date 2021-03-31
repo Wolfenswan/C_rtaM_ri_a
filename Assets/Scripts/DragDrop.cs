@@ -119,8 +119,8 @@ public class DragDrop : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
             rectTransform.anchoredPosition = defaultPos;
             
             // Dragging sometimes does funny things by setting z level at -400. This hopefully fixes that
-            if (rectTransform.position.z != 0f)
-                rectTransform.position = new Vector3(rectTransform.position.x,rectTransform.position.y,0f);
+            if (rectTransform.localPosition.z != 0f)
+                rectTransform.localPosition = new Vector3(rectTransform.localPosition.x,rectTransform.localPosition.y,0f);
         }
 
     }
