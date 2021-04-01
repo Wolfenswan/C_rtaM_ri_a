@@ -39,6 +39,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4939261188979406047}
     m_Modifications:
+    - target: {fileID: 279540390602452311, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178250786865152
+      objectReference: {fileID: 0}
+    - target: {fileID: 279540390602452311, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
     - target: {fileID: 279540392389419000, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
       propertyPath: m_Name
       value: PuzzlePieceUI
@@ -135,6 +143,38 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7426793234260690964, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178176505741312
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234260690964, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234540687763, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 177744744087552
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234540687763, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234669528794, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178238195564544
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234669528794, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234976212006, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178265840222208
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793234976212006, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
     - target: {fileID: 7426793235143876756, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 1352335994880
@@ -143,7 +183,64 @@ PrefabInstance:
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
       value: GUID:4680290fce9d3454cad5ac67af295700
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7426793235475508980, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 177646341521408
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235475508980, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235667464101, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178265840222208
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235667464101, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235760423532, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178303937085440
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235760423532, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235803564379, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 177951594577920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235803564379, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235885604737, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178016719536128
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793235885604737, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793236037350649, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178215877672960
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793236037350649, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793236184575936, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableEntryReference.m_KeyId
+      value: 178118418825216
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426793236184575936, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
+      propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:4680290fce9d3454cad5ac67af295700
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 279540392389419007, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8de368cc3e79ba14cb71195a70dca898, type: 3}
 --- !u!224 &4863467704903477254 stripped
 RectTransform:
