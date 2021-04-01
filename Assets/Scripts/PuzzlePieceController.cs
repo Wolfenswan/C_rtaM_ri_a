@@ -60,8 +60,7 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
         _rectTransform.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         PuzzlePieceDraggedEvent?.Invoke(true);
-        ToggleHintEvent?.Invoke(_localizedHintText);
-        //ToggleHint(false);
+        //ToggleHintEvent?.Invoke(_localizedHintText); // TODO what hint box behaviour is desirable here: disable when dragging, enable when dragging or keep as is?
     }
 
     public void OnEndDrag(PointerEventData eventData)

@@ -21,30 +21,29 @@ MonoBehaviour:
   - m_Id: 6551613440
     m_Localized: 'Hello!
 
-      
-
-      We''re happy that you are playing C_rta
-      M_ar_na.
-
-      
-
-      Simply navigate the map by clicking & dragging the
-      cursor. You can also zoom using the mouse wheel.
-
-      
-
-      To play,
-      you need to drag the images from the bottom bar to their correct place on the
-      map.
-
-      
-
-      When you click on one of the images, you will get a hint.
-      To hide this hint again simply click on the picture another time.
 
 
-      Have
-      fun!'
+      We''re happy that you are playing C_rta M_ar_na.
+
+
+
+      Simply
+      navigate the map by clicking & dragging the cursor. You can also zoom using
+      the mouse wheel.
+
+
+
+      To play, you need to drag the images from the bottom
+      bar to their correct place on the map.
+
+
+
+      When you click on one of the
+      images, you will get a hint. To hide this hint again simply click on the picture
+      another time.
+
+
+      Have fun!'
     m_Metadata:
       m_Items: []
   - m_Id: 1352335994880
@@ -54,6 +53,116 @@ MonoBehaviour:
       in particular - the old center of the Hanseatic League - gradually lost its
       position. But does this really mean that Lvbeca has to disappear from the map
       altogether?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 177646341521408
+    m_Localized: 'Navigation at sea was difficult at that time. The compass had only
+      become widespread since the 15th century, and the sextant was still almost
+      200 years away.
+
+      
+
+      The compass, on the other hand, was already
+      known and appreciated as a navigational aid, measuring not only German, but
+      also Swedish and English miles on the map. Even today, compasses are still
+      used in seafaring as aids to navigation.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 177744744087552
+    m_Localized: "A sailor who went overboard could hope for little help. In order
+      for a ship of his caravan to turn around for him, he had to be lucky enough
+      to go overboard with important goods, such as pigs. \n\nOtherwise he would
+      become - like this poor guy here - food for the fish. And sometimes also for
+      the rays."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 177951594577920
+    m_Localized: 'Danes and Low Germans have always been in a tumultuous relationship,
+      marked as much by mutual trade as by wars.
+
+      
+
+      A nice walk from
+      the North Sea to the Baltic Sea was therefore hardly possible without being
+      reminded of times of conflict. Especially in the form of the Danewerk near
+      Schleswig, which connected the coasts of both seas since about the seventh
+      century.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178016719536128
+    m_Localized: Sweden had become the dominant power of the Baltic region in the
+      16th century. The map pays tribute to this not only by the sheer size of Scandinavia,
+      but also by the prominent depiction of King Gustav I. But what is a ruler of
+      Svecia without his crowns?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178118418825216
+    m_Localized: "Reindeer are everywhere on the map: They were in the Scandinavian
+      region coveted cargo and livestock, because they were able to cope with the
+      icy weather. \r\n\r\nAccording to the map, it even seems possible to overtake
+      a moving ship with them. But whether the ice is really strong enough to carry
+      these sleds from Finland and Sweden?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178176505741312
+    m_Localized: "If one follows the map towards Russia, the depictions of troops
+      and battles pile up. The illustrations do not stand for specific conflicts,
+      but rather thematize an evolved conflict: \n\nIn the struggle for supremacy
+      in the Baltic Sea region, Sweden and the Principality of Moscow repeatedly
+      clashed. Their conflict extended into icy Finland, where these horsemen can
+      cross the sea thanks to a sheet of ice."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178215877672960
+    m_Localized: "In a dominant place directly under the North Pole, next to pagans
+      worshipping the sun and fire and their nomad tents, a legendary hero can be
+      seen. He carries his name on runic tablets: \"Starkad, the Swedish pugilist\".
+      \r\n\r\nThus, on the one hand, he symbolizes Sweden's claim to power, and on
+      the other hand, the written tablets are supposed to prove Sweden's heritage
+      as an ancient cultural nation."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178238195564544
+    m_Localized: 'Whales were not uncommon in the North Sea and were hunted for opportunity
+      for their meat. Nevertheless, they seemed "monstrous" to the people of that
+      time. They were believed to be able to pull an entire ship into the abyss and
+      to form "disappearing islands" with their huge backs.
+
+
+      This specimen
+      also fell victim to such a confusion. But can one reproach the English sailors
+      for not being quite so accurate between ice floes and sea monsters?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178250786865152
+    m_Localized: "Pope Paul III imposed a ten-year printing privilege on the map,
+      preventing its imitation and further distribution. The Venetian government
+      also issued a corresponding decree. \r\n\r\nAccordingly, the verbose text is
+      prominently reproduced on the map. But no matter in which direction one reads
+      the privileges,\nman-eating giant crayish, don't seem to be mentioned in or
+      around them."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178265840222208
+    m_Localized: "The English navigator Martin Frobisher undertook his first Arctic
+      voyage in the year 76 of the sixteenth century with 3 ships, in search of a
+      Northwest Passage. But not only weather and mystical mythical creatures were
+      a danger for the sailors of the North Sea. Other sailors also preyed on their
+      ships.\r\n\r\nOne wonders what the crew of the three-master hailing from L\xFCbeck
+      was thinking when they sailed directly towards this battle between Hamburg
+      and Scottish crews."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178287956787200
+    m_Localized: "Despite the centuries-old tradition of seafaring, the sea remained
+      a fearsome force. Not only tools or cargo disappeared in its depths. \n\nEven
+      entire ships are said to have been dragged into the depths by maelstroms. No
+      wonder that nearby a devil is already sweeping his stable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178303937085440
+    m_Localized: Thick sheets of ice often prevented the seafarers from getting through
+      in the icy northern sea. These "locals", however, had less of a problem.
     m_Metadata:
       m_Items: []
   references:
