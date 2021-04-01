@@ -1,5 +1,5 @@
+using System;
 using System.Collections;
-using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -68,7 +68,7 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
         var elapsedTime = 0.0f;
         while (elapsedTime < _data.SlotFadeInTime)
         {
-            yield return null;
+            yield return new WaitForEndOfFrame();
             elapsedTime += Time.deltaTime;
             _cGroup.alpha = Mathf.Clamp01(elapsedTime / _data.SlotFadeInTime);
         }
@@ -85,7 +85,7 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
 
     void ClickBox_OnDropEvent(PointerEventData eventData)
     {
-        if (_assignedPiece != null && eventData.pointerDrag != null)
+        if (_assignedPiece != null && eventData.pointerDrag != null && _cGroup.alpha == _defaultAlpha)
         {
             PuzzlePieceController puzzlepiece = eventData.pointerDrag.GetComponent<PuzzlePieceController>();
             if (_assignedPiece == eventData.pointerDrag)

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using NEINGames.Utilities;
 
 public class CameraController : MonoBehaviour
 {
@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour
             _cam.orthographicSize = targetOrthoSize;
         }
 
-        if (buttonDown || buttonHeld && !GameManager.DraggingPuzzlePiece && !IsPointerOverUIElement(cursorPos))
+        if (buttonDown || buttonHeld && !GameManager.DraggingPuzzlePiece && !RaycastUtilities.IsPoint2DOverElementWithTag(cursorPos, "UIElement")) // IsPointerOverUIElement(cursorPos)
         {
             PanCamera(buttonDown, buttonHeld, cursorWorldPos);
             //if (_hintBox.IsVisible) _hintBox.ToggleHintBoxVisibility(false); // TODO test if this is actually desireable
@@ -70,13 +70,13 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    bool IsPointerOverUIElement(Vector2 cursorPos)
-    // http://answers.unity.com/answers/1748972/view.html
-    {
-        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = cursorPos;//new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        return results.Count(obj => obj.gameObject.tag == "UIElement") > 0;
-    }
+    // bool IsPointerOverUIElement(Vector2 cursorPos)
+    // // http://answers.unity.com/answers/1748972/view.html
+    // {
+    //     PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+    //     eventDataCurrentPosition.position = cursorPos;//new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+    //     List<RaycastResult> results = new List<RaycastResult>();
+    //     EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+    //     return results.Count(obj => obj.gameObject.tag == "UIElement") > 0;
+    // }
 }

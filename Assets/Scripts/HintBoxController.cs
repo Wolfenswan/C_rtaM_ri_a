@@ -5,8 +5,7 @@ using TMPro;
 
 public class HintBoxController : MonoBehaviour 
 {   
-    public bool IsVisible{get=>_canvasGroup.alpha==1;}    
-    public bool IsActive{get;private set;}
+    public bool IsVisible{get=>_canvasGroup.alpha==1;}
 
     [SerializeField] LocalizedString _localizedString;
     string _localizedHintText;
@@ -32,24 +31,22 @@ public class HintBoxController : MonoBehaviour
         _localizedString.StringChanged -= UpdateLocalizedString;
     }
 
-    public void ToggleHintBoxVisibility(bool enable) => _canvasGroup.alpha = enable?1:0;
-
-    void ToggleHint(string hintText, bool forced=false)
-    {
-        var enableHint = forced || !(_textField.text == hintText) || (int) _canvasGroup.alpha == 0;
-        if (enableHint)
-        {   
-            _textField.text = hintText;
-        }
-        ToggleHintBoxVisibility(enableHint);
-    }
+    void ToggleHintBoxVisibility(bool enable) => _canvasGroup.alpha = enable?1:0;
 
     void UpdateLocalizedString(string newString)
     {   
         // If the locale changes the HintBox will be forced to display the starter hint again (in the new language)
         _localizedHintText = newString;
-        ToggleHint(_localizedHintText, true);
+        _textField.text = _localizedHintText;
+        ToggleHintBoxVisibility(true);
     } 
 
-    void PuzzlePieceController_ToggleHintEvent(string hintText) => ToggleHint(hintText);
+    void PuzzlePieceController_ToggleHintEvent(string hintText) 
+    {   
+        // Disables the hint if it's currently active or enables (and shows) the hintBox if not
+        var enableHint = !(_textField.text == hintText) || (int) _canvasGroup.alpha == 0;
+        if (enableHint)
+            _textField.text = hintText;
+        ToggleHintBoxVisibility(enableHint);
+    }
 }
