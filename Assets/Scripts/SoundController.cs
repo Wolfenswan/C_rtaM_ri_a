@@ -21,12 +21,22 @@ public class SoundController : MonoBehaviour
         _crossfadeTime = 6f;
     }
 
-    private void Start()
+    void Start()
     {
         PlayNextAudio();
     }
 
-    public void PlayNextAudio()
+    void OnEnable() 
+    {
+        MapCoverController.MapCoverRevealedEvent += MapCoverController_MapCoverRevealedEvent;
+    }
+
+    void OnDisable() 
+    {
+        MapCoverController.MapCoverRevealedEvent -= MapCoverController_MapCoverRevealedEvent;
+    }
+
+    void PlayNextAudio()
     {
         if (_audioSourceA.isPlaying)
         {
@@ -40,10 +50,12 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    void MapCoverController_MapCoverRevealedEvent(GameObject mapCoverObject) => PlayNextAudio();
+
     IEnumerator Crossfade(AudioSource a, AudioSource b, float _transitionTime)
     {
 
-        // teilt die zeit und das volume in kleine stücke
+        // teilt die zeit und das volume in kleine stï¿½cke
         float _interval_size = 20f;
         float _step_interval = _transitionTime / _interval_size;
         float _vol_interval = a.volume / _interval_size;
@@ -51,7 +63,7 @@ public class SoundController : MonoBehaviour
         // audiosourceB bekommt den nachsten clip zum spielen
         b.clip = audioClips[_audionumber];
         _audionumber++;
-        // wenn _audionumber großer als das array ist, wirds auf 0 gesetzt
+        // wenn _audionumber groï¿½er als das array ist, wirds auf 0 gesetzt
         if (_audionumber >= audioClips.Length)
         {
             _audionumber = 0;

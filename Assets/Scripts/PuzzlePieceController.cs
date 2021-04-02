@@ -9,15 +9,18 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
 {  
     public static event Action<bool> PuzzlePieceDraggedEvent;
     public static event Action<string> ToggleHintEvent;
+    public event Action<GameObject> PuzzlePieceSlottedEvent;
     //public static event Action<GameObject> HintBoxToggled; // // ! Todo dedicated hintbox Controller that receives the string for the hint via event or method
     
     public bool DroppedInSlot;
 
     #region private fields
     [SerializeField] LocalizedString _localizedString;
+    [SerializeField] CartaData _data;
     string _localizedHintText;
     Canvas _canvas;
     Vector3 _defaultPos;
+    bool _visible = false;
     #endregion
 
     #region components
@@ -25,23 +28,30 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     RectTransform _rectTransform;
     #endregion
 
-    private void Awake()
+    void Awake()
     {
 
         _rectTransform = GetComponent<RectTransform>();
         _canvasGroup = GetComponent<CanvasGroup>();
         _defaultPos = _rectTransform.anchoredPosition;
         _defaultPos.z = 0f;
-        _canvas = GameObject.FindGameObjectWithTag("UICanvas").GetComponent<Canvas>();
+        _canvas = GameObject.FindGameObjectWithTag("UIPuzzlePieces").GetComponent<Canvas>();
     }
     
-    private void OnEnable() 
+    void OnEnable() 
     {
         //PuzzlePieceController.HintBoxToggled += DragDrop_HintBoxToggled; // // ! Lol. -> dedicated HintBox Controller
         _localizedString.StringChanged += UpdateLocalizedString;
+        if(!_visible)
+            StartCoroutine(FadeInPiece());
     }
 
-    private void OnDisable() 
+    void Start() 
+    {
+        
+    }
+
+    void OnDisable() 
     {
         //PuzzlePieceController.HintBoxToggled -= DragDrop_HintBoxToggled;
         _localizedString.StringChanged -= UpdateLocalizedString;
@@ -100,11 +110,17 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
 
     void UpdateLocalizedString(string newString) => _localizedHintText = newString;
 
+    public void FadeIn() => StartCoroutine(FadeInPiece());
+
     IEnumerator OnDroppedCoroutine()
     {
         yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() => !GameManager.GameIsPaused);
         if (DroppedInSlot) // Set from within the Slot reacting to its own OnDropEvent
+        {
+            PuzzlePieceSlottedEvent?.Invoke(gameObject);
             gameObject.SetActive(false);
+        }
         else  // If the puzzle piece was not dropped on the correct slot reset it
         {
             _canvasGroup.alpha = 1f;
@@ -115,6 +131,20 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
                 _rectTransform.localPosition = new Vector3(_rectTransform.localPosition.x,_rectTransform.localPosition.y,0f);
         }
 
+    }
+
+    IEnumerator FadeInPiece()
+    {
+        var elapsedTime = 0.0f;
+        _canvasGroup.alpha = 0f;
+        while (elapsedTime < _data.CoverFadeOutTime)
+        {
+            yield return new WaitForEndOfFrame();
+            yield return new WaitUntil(() => !GameManager.GameIsPaused);
+            elapsedTime += Time.deltaTime;
+            _canvasGroup.alpha = Mathf.Clamp01(elapsedTime / _data.CoverFadeOutTime);
+        }
+        _visible = true;
     }
 
 }

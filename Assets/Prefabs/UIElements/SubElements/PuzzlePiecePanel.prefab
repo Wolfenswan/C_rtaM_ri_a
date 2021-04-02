@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5207870770884461725}
   - component: {fileID: 5207870770884461727}
   - component: {fileID: 5207870770884461726}
+  - component: {fileID: 95186475024976625}
   m_Layer: 5
   m_Name: PuzzlePiecePanel
   m_TagString: UIElement
@@ -88,6 +89,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &95186475024976625
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207870770884461724}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
 --- !u!1001 &3221893734376496258
 PrefabInstance:
   m_ObjectHideFlags: 0

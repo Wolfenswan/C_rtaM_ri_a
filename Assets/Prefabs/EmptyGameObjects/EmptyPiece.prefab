@@ -97,6 +97,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+  _data: {fileID: 11400000, guid: 8845b226f90a1434093ace21d487403d, type: 2}
 --- !u!225 &7273425103146806531
 CanvasGroup:
   m_ObjectHideFlags: 0

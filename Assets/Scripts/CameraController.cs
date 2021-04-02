@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     Camera _cam;
     HanseGameJam.RangeInt _zoomClamp;
     Vector3 _dragStartingPoint;
-    HintBoxController _hintBox;
+    //HintBoxController _hintBox;
 
     void Awake() 
     {
@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         _zoomClamp = _data.MouseZoomClampRange;
-        _hintBox = GameObject.FindGameObjectWithTag("HintBox").GetComponent<HintBoxController>();
+        //_hintBox = GameObject.FindGameObjectWithTag("HintBox").GetComponent<HintBoxController>();
     }
 
     void Update()
@@ -42,8 +42,7 @@ public class CameraController : MonoBehaviour
             if (targetOrthoSize != _cam.orthographicSize && zoom > 0) MoveCameraToZoom(cursorWorldPos, zoom);
             _cam.orthographicSize = targetOrthoSize;
         }
-
-        if (buttonDown || buttonHeld && !GameManager.DraggingPuzzlePiece && !RaycastUtilities.IsPoint2DOverElementWithTag(cursorPos, "UIElement")) // IsPointerOverUIElement(cursorPos)
+        if (buttonDown || buttonHeld && !GameManager.DraggingPuzzlePiece && !RaycastUtilities.IsPoint2DOverElementWithTag(cursorPos, "UIPuzzlePanel")) // IsPointerOverUIElement(cursorPos)
         {
             PanCamera(buttonDown, buttonHeld, cursorWorldPos);
             //if (_hintBox.IsVisible) _hintBox.ToggleHintBoxVisibility(false); // TODO test if this is actually desireable

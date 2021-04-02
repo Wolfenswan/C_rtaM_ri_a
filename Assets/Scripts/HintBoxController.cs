@@ -43,7 +43,7 @@ public class HintBoxController : MonoBehaviour
 
     void PuzzlePieceController_ToggleHintEvent(string hintText) 
     {   
-        // Disables the hint if it's currently active or enables (and shows) the hintBox if not
+        // Disables the hint if it's currently active or enables (and shows) the hintBox if it's not visible
         var enableHint = !(_textField.text == hintText) || (int) _canvasGroup.alpha == 0;
         if (enableHint)
             _textField.text = hintText;

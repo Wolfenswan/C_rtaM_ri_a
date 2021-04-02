@@ -11,6 +11,10 @@ TagManager:
   - PuzzlePiece
   - UIElement
   - Cover1
+  - UIMainMenu
+  - UIPuzzle
+  - UIPuzzlePieces
+  - UIPuzzlePanel
   layers:
   - Default
   - TransparentFX

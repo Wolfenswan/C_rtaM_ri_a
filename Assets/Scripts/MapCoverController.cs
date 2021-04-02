@@ -1,46 +1,74 @@
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 public class MapCoverController : MonoBehaviour
 {
+    public static event Action<GameObject> MapCoverRevealedEvent;
+
     [SerializeField] CartaData _data;
     [SerializeField] List<GameObject> _piecesRequired;
     [SerializeField] List<GameObject> _piecesToReveal;
-    private SoundController soundController;
-    private void Awake()
+
+    SpriteRenderer _spriteRenderer;
+    bool _fading = false;
+
+    // void Update() 
+    // {   
+    //     if (_piecesRequired.Count(obj => obj.activeSelf) == 0)
+    //         FadeOut();
+    // }
+
+    void Awake() 
     {
-        soundController = FindObjectOfType<SoundController>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    void Update() 
-    {   
-        if (_piecesRequired.Count(obj => obj.activeSelf) == 0)
+
+    void Start() 
+    {
+        foreach (var piece in _piecesRequired)
         {
+            piece.GetComponent<PuzzlePieceController>().PuzzlePieceSlottedEvent += PuzzlePiece_PuzzlePieceSlottedEvent;
+        }
+    }
+
+    public void FadeOut()
+    {
+        if (!_fading)
+        {
+            _fading = true;
             StartCoroutine(FadeOutCover());
         }
+    }
+
+    void PuzzlePiece_PuzzlePieceSlottedEvent(GameObject piece)
+    {
+        var controller = piece.GetComponent<PuzzlePieceController>();
+        controller.PuzzlePieceSlottedEvent -= PuzzlePiece_PuzzlePieceSlottedEvent;
+        if (_piecesRequired.Count(obj => !obj.GetComponent<PuzzlePieceController>().DroppedInSlot) == 0)
+            FadeOut();
     }
 
     IEnumerator FadeOutCover() // CONSIDER - write a generic utility DoOverTime-method accepting a Func<> or delegate
     {
         var elapsedTime = 0.0f;
-        var color = GetComponent<SpriteRenderer>().color;
-        while (elapsedTime < _data.CoverFadeOutTime && color.a > 0)
-        {
-            yield return null;
-            elapsedTime += Time.deltaTime;
-            color.a -= Mathf.Clamp01(elapsedTime / _data.CoverFadeOutTime);
-            GetComponent<SpriteRenderer>().color = color;
-        }
-
+        var color = _spriteRenderer.color;
         foreach (var item in _piecesToReveal)
         {   
             item?.SetActive(true);
         }
+        while (elapsedTime < _data.CoverFadeOutTime)
+        {
+            yield return new WaitForEndOfFrame();
+            yield return new WaitUntil(() => !GameManager.GameIsPaused);
+            elapsedTime += Time.deltaTime;
+            color.a = 1 - Mathf.Clamp01(elapsedTime / _data.CoverFadeOutTime);
+            _spriteRenderer.color = color;
+        }
 
+        MapCoverRevealedEvent?.Invoke(gameObject);
         gameObject.SetActive(false);
-
-
-        soundController.PlayNextAudio();
     }
 }

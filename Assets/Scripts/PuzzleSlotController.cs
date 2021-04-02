@@ -69,6 +69,7 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
         while (elapsedTime < _data.SlotFadeInTime)
         {
             yield return new WaitForEndOfFrame();
+            yield return new WaitUntil(() => !GameManager.GameIsPaused);
             elapsedTime += Time.deltaTime;
             _cGroup.alpha = Mathf.Clamp01(elapsedTime / _data.SlotFadeInTime);
         }
