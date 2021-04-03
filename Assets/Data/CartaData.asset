@@ -18,4 +18,4 @@ MonoBehaviour:
     Max: 30
   AlphaBlendSpeed: 0
   SlotFadeInTime: 1
-  CoverFadeOutTime: 2
+  CoverFadeOutTime: 3

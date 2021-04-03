@@ -7,23 +7,22 @@ public class MenuController : MonoBehaviour
     public event Action StartGameEvent;
     public event Action<bool> TogglePauseEvent;
 
-    public bool MenuIsVisible{get => _menu.activeSelf;}
+    public bool MenuIsVisible{get => _menuCanvas.activeSelf;}
 
-    [SerializeField] GameObject _menu;
-
-    GameObject _pausebutton;
+    [SerializeField] GameObject _menuCanvas;
+    [SerializeField] GameObject _continueButton;
 
     void Awake() 
     {
-        _pausebutton = _menu.transform.Find("Buttons").Find("ButtonContinue").gameObject;
-        _pausebutton.SetActive(false);
+        //_pausebutton = _menu.transform.Find("Buttons").Find("ButtonContinue").gameObject; //* Ugly. Improve when time
+        _continueButton.SetActive(false);
     }
 
     public void ToggleMenuVisibility(bool show)
     {
-        if (show && !_pausebutton.activeSelf && GameManager.GameIsPaused)
-            _pausebutton.SetActive(true);
-        _menu.SetActive(show);
+        if (show && !_continueButton.activeSelf && GameManager.GameIsPaused)
+            _continueButton.SetActive(true);
+        _menuCanvas.SetActive(show);
     }
 
     public void ButtonNewGame()

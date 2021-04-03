@@ -12,13 +12,13 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     public event Action<GameObject> PuzzlePieceSlottedEvent;
     //public static event Action<GameObject> HintBoxToggled; // // ! Todo dedicated hintbox Controller that receives the string for the hint via event or method
     
-    public bool DroppedInSlot;
+    [HideInInspector] public bool DroppedInSlot;
 
     #region private fields
-    [SerializeField] LocalizedString _localizedString;
     [SerializeField] CartaData _data;
+    [SerializeField] Canvas _puzzleCanvas;
+    [SerializeField] LocalizedString _localizedString;
     string _localizedHintText;
-    Canvas _canvas;
     Vector3 _defaultPos;
     bool _visible = false;
     #endregion
@@ -35,7 +35,6 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
         _canvasGroup = GetComponent<CanvasGroup>();
         _defaultPos = _rectTransform.anchoredPosition;
         _defaultPos.z = 0f;
-        _canvas = GameObject.FindGameObjectWithTag("UIPuzzlePieces").GetComponent<Canvas>();
     }
     
     void OnEnable() 
@@ -60,7 +59,7 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     public void OnDrag(PointerEventData eventData)
     {
         _canvasGroup.alpha = .6f;
-        _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
+        _rectTransform.anchoredPosition += eventData.delta / _puzzleCanvas.scaleFactor;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -133,7 +132,7 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
 
     }
 
-    IEnumerator FadeInPiece()
+    IEnumerator FadeInPiece() // CONSIDER write Extension for _canvasGroup
     {
         var elapsedTime = 0.0f;
         _canvasGroup.alpha = 0f;

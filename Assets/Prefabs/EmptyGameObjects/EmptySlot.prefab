@@ -58,6 +58,7 @@ MonoBehaviour:
   _assignedPiece: {fileID: 0}
   _data: {fileID: 11400000, guid: 8845b226f90a1434093ace21d487403d, type: 2}
   _defaultAlpha: 0.1
+  _clickBox: {fileID: 341554902208034502}
 --- !u!222 &28713795597347507
 CanvasRenderer:
   m_ObjectHideFlags: 0

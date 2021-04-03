@@ -8,15 +8,14 @@ public class HintBoxController : MonoBehaviour
     public bool IsVisible{get=>_canvasGroup.alpha==1;}
 
     [SerializeField] LocalizedString _localizedString;
+    [SerializeField] TextMeshProUGUI _textField;
     string _localizedHintText;
-
-    TextMeshProUGUI _textField;
     CanvasGroup _canvasGroup;
 
     void Awake() 
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        _textField = transform.Find("HintText").GetComponent<TextMeshProUGUI>();
+        //_textField = transform.Find("HintText").GetComponent<TextMeshProUGUI>();
     }
 
     void OnEnable()

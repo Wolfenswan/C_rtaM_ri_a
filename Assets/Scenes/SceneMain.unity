@@ -128,7 +128,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2850470169336321427, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
   m_PrefabInstance: {fileID: 4863467706117238667}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &288373270 stripped
+--- !u!1 &167806584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1167242362190289938, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
   m_PrefabInstance: {fileID: 1167242360909351981}
@@ -159,6 +159,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2850470168408721534, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
   m_PrefabInstance: {fileID: 4863467706117238667}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &886071023 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 4108505000562310717, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
+  m_PrefabInstance: {fileID: 4863467706117238667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &935829071 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1819152944899771542, guid: 47f7cb908e82acf47b7cda0689c898d3, type: 3}
@@ -168,11 +173,6 @@ Camera:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2850470168522523398, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
   m_PrefabInstance: {fileID: 4863467706117238667}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1004235743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8837874264363782681, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
-  m_PrefabInstance: {fileID: 2019931171}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1143604065 stripped
 GameObject:
@@ -194,33 +194,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2850470170030751723, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
   m_PrefabInstance: {fileID: 4863467706117238667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1487249222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7303940046215895148, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+  m_PrefabInstance: {fileID: 1167242360909351981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1612361138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2850470168356576932, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
   m_PrefabInstance: {fileID: 4863467706117238667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1628095878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8437087658155809220, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
+  m_PrefabInstance: {fileID: 2019931171}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1747523047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2850470169818683243, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
   m_PrefabInstance: {fileID: 4863467706117238667}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1886168319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4863467704903477250, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
-  m_PrefabInstance: {fileID: 4863467706117238667}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &1886168324
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886168319}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &1987175660
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,9 +288,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1896559551959555807, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
-      propertyPath: _menu
+      propertyPath: _pausebutton
       value: 
-      objectReference: {fileID: 1004235743}
+      objectReference: {fileID: 1628095878}
     - target: {fileID: 3272851585474854454, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -362,6 +355,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: UIMainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4209469320337714660, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837874264363782681, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
+      propertyPath: m_Name
+      value: UIMenuGroup
+      objectReference: {fileID: 0}
     - target: {fileID: 8837874264363782681, guid: 9db014dfee3a449428ffcd6023598b57, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -405,6 +406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartaMarina_Leerstellen
       objectReference: {fileID: 0}
+    - target: {fileID: 1167242362190289938, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1167242362190290028, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
       propertyPath: _piecesRequired.Array.data[0]
       value: 
@@ -428,6 +433,38 @@ PrefabInstance:
     - target: {fileID: 1167242362190290031, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303940046215895057, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 346068e2ef2b447b0805f78c59e7636a, type: 3}
+    - target: {fileID: 7303940046215895057, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303940046215895058, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: _piecesRequired.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303940046215895058, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: _piecesToReveal.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303940046215895058, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: _piecesToReveal.Array.data[0]
+      value: 
+      objectReference: {fileID: 1747523047}
+    - target: {fileID: 7303940046215895058, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: _piecesToReveal.Array.data[1]
+      value: 
+      objectReference: {fileID: 167806584}
+    - target: {fileID: 7303940046215895148, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303940046215895148, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
+      propertyPath: m_TagString
+      value: InitialCover
       objectReference: {fileID: 0}
     - target: {fileID: 8446370428956600917, guid: 04d0d3ebbb4261649a118721178597f4, type: 3}
       propertyPath: _piecesRequired.Array.data[0]
@@ -571,14 +608,6 @@ PrefabInstance:
         L\xFCbeck - der alte Mittelpunkt der Hanse - verlor seine Stellung nach und
         nach. Aber muss Lvbeca deswegen gleich ganz von der Karte verschwinden?"
       objectReference: {fileID: 0}
-    - target: {fileID: 750618291428336094, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 750618291428336094, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
-      propertyPath: m_IgnoreParentGroups
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1825878946384373741, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
       propertyPath: m_Name
       value: PuzzleUI
@@ -686,6 +715,10 @@ PrefabInstance:
     - target: {fileID: 2850470169584448478, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 9.5361
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850470169818683243, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2850470170030751723, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
       propertyPath: m_IsActive
@@ -865,11 +898,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4863467706382512050, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 26.79303
+      value: 26.792969
       objectReference: {fileID: 0}
     - target: {fileID: 4863467706382512050, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 41.96997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863467706382512051, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
+      propertyPath: m_TagString
+      value: UIPuzzlePanel
       objectReference: {fileID: 0}
     - target: {fileID: 4939261188979406047, guid: 2a8cdfbdcaee4954ab4836025bbf4f7d, type: 3}
       propertyPath: m_RootOrder
@@ -943,7 +980,15 @@ PrefabInstance:
     - target: {fileID: 5124890463035583246, guid: 516ef41a6f3faf540ab8f885210b99c9, type: 3}
       propertyPath: _firstMapCover
       value: 
-      objectReference: {fileID: 288373270}
+      objectReference: {fileID: 1487249222}
+    - target: {fileID: 5124890463035583246, guid: 516ef41a6f3faf540ab8f885210b99c9, type: 3}
+      propertyPath: _menuController
+      value: 
+      objectReference: {fileID: 532816370}
+    - target: {fileID: 5124890463035583246, guid: 516ef41a6f3faf540ab8f885210b99c9, type: 3}
+      propertyPath: _puzzleUICanvasGroup
+      value: 
+      objectReference: {fileID: 886071023}
     - target: {fileID: 5124890463035583247, guid: 516ef41a6f3faf540ab8f885210b99c9, type: 3}
       propertyPath: m_Name
       value: GameManager

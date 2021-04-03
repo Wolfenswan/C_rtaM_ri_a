@@ -11,7 +11,7 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
     [SerializeField] float _defaultAlpha = 0.1f; //* REMINDER - once we modify alpha through a difficulty setting, add an override
 
     #region fields
-    ClickBoxController _clickBox;
+    [SerializeField] ClickBoxController _clickBox;
     #endregion
     
     #region components
@@ -28,7 +28,7 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
         
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
-        _clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();
+        //_clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();
         
         _cGroup.alpha = _defaultAlpha;
     }

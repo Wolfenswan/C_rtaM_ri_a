@@ -7,11 +7,11 @@ using NEINGames.Utilities;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] CartaData _data;
+    //[SerializeField] HintBoxController _hintBox;
 
     Camera _cam;
     HanseGameJam.RangeInt _zoomClamp;
     Vector3 _dragStartingPoint;
-    //HintBoxController _hintBox;
 
     void Awake() 
     {
@@ -21,16 +21,20 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         _zoomClamp = _data.MouseZoomClampRange;
-        //_hintBox = GameObject.FindGameObjectWithTag("HintBox").GetComponent<HintBoxController>();
     }
 
     void Update()
     {   
 
+        if (!GameManager.GameIsPaused)
+            CameraMovement();
+    }
+
+    void CameraMovement()
+    {
         var zoom = Input.mouseScrollDelta.y;
         var cursorPos = Input.mousePosition;
         var cursorWorldPos = _cam.ScreenToWorldPoint(cursorPos);
-
         var buttonDown = Input.GetMouseButtonDown(0); //* CONSIDER - also allow middle/right mouse?
         var buttonHeld = Input.GetMouseButton(0);
 
@@ -47,7 +51,6 @@ public class CameraController : MonoBehaviour
             PanCamera(buttonDown, buttonHeld, cursorWorldPos);
             //if (_hintBox.IsVisible) _hintBox.ToggleHintBoxVisibility(false); // TODO test if this is actually desireable
         }
-            
     }
 
     void MoveCameraToZoom(Vector3 cursorWorldPos, float zoom)
@@ -68,14 +71,4 @@ public class CameraController : MonoBehaviour
             transform.position += difference;
         }
     }
-
-    // bool IsPointerOverUIElement(Vector2 cursorPos)
-    // // http://answers.unity.com/answers/1748972/view.html
-    // {
-    //     PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-    //     eventDataCurrentPosition.position = cursorPos;//new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-    //     List<RaycastResult> results = new List<RaycastResult>();
-    //     EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-    //     return results.Count(obj => obj.gameObject.tag == "UIElement") > 0;
-    // }
 }

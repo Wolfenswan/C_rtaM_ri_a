@@ -15,6 +15,7 @@ TagManager:
   - UIPuzzle
   - UIPuzzlePieces
   - UIPuzzlePanel
+  - InitialCover
   layers:
   - Default
   - TransparentFX
