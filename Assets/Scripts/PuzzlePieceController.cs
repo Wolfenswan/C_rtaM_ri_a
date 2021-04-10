@@ -1,14 +1,15 @@
 using System.Collections;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization;
 
 //! TODO Rename to XYController for consistency (DragDrop* or Piece*)
-public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {  
     public static event Action<bool> PuzzlePieceDraggedEvent;
-    public static event Action<string> ToggleHintEvent;
+    public static event Action<string, bool> ToggleHintEvent;
     public event Action<GameObject> PuzzlePieceSlottedEvent;
     //public static event Action<GameObject> HintBoxToggled; // // ! Todo dedicated hintbox Controller that receives the string for the hint via event or method
     
@@ -21,11 +22,14 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     string _localizedHintText;
     Vector3 _defaultPos;
     bool _visible = false;
+    Color _defaultColor;
+    Color _glowColor;
     #endregion
 
     #region components
     CanvasGroup _canvasGroup;
     RectTransform _rectTransform;
+    Image _image;
     #endregion
 
     void Awake()
@@ -33,6 +37,9 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
 
         _rectTransform = GetComponent<RectTransform>();
         _canvasGroup = GetComponent<CanvasGroup>();
+        _image = GetComponent<Image>();
+        _glowColor = _data.PuzzlePieceGlowColor;
+        _defaultColor = _image.color;
         _defaultPos = _rectTransform.anchoredPosition;
         _defaultPos.z = 0f;
     }
@@ -45,19 +52,33 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
             StartCoroutine(FadeInPiece());
     }
 
-    void Start() 
-    {
-        
-    }
-
     void OnDisable() 
     {
         //PuzzlePieceController.HintBoxToggled -= DragDrop_HintBoxToggled;
         _localizedString.StringChanged -= UpdateLocalizedString;
     }
+    void ToggleGlow(bool enable)
+    {
+        if (enable)
+        {            
+            if (_image.color != _glowColor) _image.color = _glowColor;
+        }
+        else
+        {   
+            if (_image.color != _defaultColor) _image.color = _defaultColor;
+        }
+            
+    }
+    
+    void UpdateLocalizedString(string newString) => _localizedHintText = newString;
+    
+    #region onPointer Methods
+    public void OnPointerEnter(PointerEventData pointerEventData) => ToggleGlow(true);
+    public void OnPointerExit(PointerEventData pointerEventData) => ToggleGlow(false);
 
     public void OnDrag(PointerEventData eventData)
     {
+        ToggleGlow(true);
         _canvasGroup.alpha = .6f;
         _rectTransform.anchoredPosition += eventData.delta / _puzzleCanvas.scaleFactor;
     }
@@ -65,15 +86,14 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     public void OnBeginDrag(PointerEventData eventData)
     {
         _canvasGroup.blocksRaycasts = false;
-
-        _rectTransform.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+        _rectTransform.transform.position = GameManager.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         PuzzlePieceDraggedEvent?.Invoke(true);
         //ToggleHintEvent?.Invoke(_localizedHintText); // TODO what hint box behaviour is desirable here: disable when dragging, enable when dragging or keep as is?
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {   
+        ToggleGlow(false);
         PuzzlePieceDraggedEvent?.Invoke(false);
         StartCoroutine(OnDroppedCoroutine());
     }
@@ -83,31 +103,10 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
         //var enableHint = !(_hintBoxTextField.text == _hintText) || (int) _hintBoxCanvasGroup.alpha == 0;
         //var enableHint = !(_hintBoxTextField.text == _localizedHintText) || (int) _hintBoxCanvasGroup.alpha == 0;
         //ToggleHint(enableHint);
-        ToggleHintEvent?.Invoke(_localizedHintText);
+        ToggleHintEvent?.Invoke(_localizedHintText, false);
         //HintBoxToggled?.Invoke(_hintBox); // // TODO rewrite this into own HintBoxController
     }
-
-    // void ToggleHint(bool enable) // // TODO rewrite this into own HintBoxController
-    // {
-    //     if (enable)
-    //     {   
-    //         _hintBoxCanvasGroup.alpha = 1;
-    //         _hintBoxTextField.text = _localizedHintText;
-    //         //_hintBoxTextField.text = _hintText;
-    //     } else
-    //     {
-    //         _hintBoxCanvasGroup.alpha = 0;
-    //     }
-    // }
-
-    // void DragDrop_HintBoxToggled(GameObject otherHintBox)
-    // {
-    //     if (otherHintBox != _hintBox && _hintBox.activeSelf)
-    //         ToggleHint(false);
-    //         //_hintBox.SetActive(false);
-    // }
-
-    void UpdateLocalizedString(string newString) => _localizedHintText = newString;
+    #endregion
 
     public void FadeIn() => StartCoroutine(FadeInPiece());
 
@@ -116,7 +115,8 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => !GameManager.GameIsPaused);
         if (DroppedInSlot) // Set from within the Slot reacting to its own OnDropEvent
-        {
+        {   
+            ToggleHintEvent?.Invoke(_localizedHintText, true);
             PuzzlePieceSlottedEvent?.Invoke(gameObject);
             gameObject.SetActive(false);
         }

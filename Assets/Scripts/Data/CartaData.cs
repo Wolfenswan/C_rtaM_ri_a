@@ -10,4 +10,5 @@ public class CartaData : ScriptableObject
     public float AlphaBlendSpeed;
     public float SlotFadeInTime = 1f;
     public float CoverFadeOutTime = 1f;
+    public Color PuzzlePieceGlowColor = new Color(255,255,255, 1);
 }

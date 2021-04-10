@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class GameManager : MonoBehaviour
 {
+    // No need to make the entire GameManager a Singleton and persistent across scenes; the static variables work perfectly fine for now
     public static bool DraggingPuzzlePiece{get; private set;} //* CONSIDER: Better here or directly in CameraController?
     public static bool GameInProgess{get; private set;}
     public static bool GameIsPaused{get => (Time.timeScale == 0);}
@@ -10,13 +12,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _firstMapCover;
     [SerializeField] MenuController _menuController;
     [SerializeField] CanvasGroup _puzzlePiecesCanvasGroup;
-    //public static Camera MainCamera{get; private set;}
+    
+    public static Camera MainCamera{get; private set;}
 
     void Awake() 
     {   
         //_menuController = GameObject.FindGameObjectWithTag("UIMainMenu").GetComponent<MenuController>();
         //_puzzleUICanvasGroup = GameObject.FindGameObjectWithTag("UIPuzzlePieces").GetComponent<CanvasGroup>();
-        //MainCamera = Camera.main; // Cached to avoid expensive lookups during runtime
+        MainCamera = Camera.main; // Cached to avoid expensive lookups during runtime
     }
 
     void Start() 
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
         PuzzlePieceController.PuzzlePieceDraggedEvent += PuzzlePieceController_PuzzlePieceDraggedEvent; //* CONSIDER: Move into CameraController
         _menuController.StartGameEvent += Menu_StartGameEvent;
         _menuController.TogglePauseEvent += Menu_TogglePauseEvent;
+        _menuController.ChangeLocaleEvent += Menu_ChangeLocaleVent;
     }
 
     void OnDisable() 
@@ -60,6 +64,11 @@ public class GameManager : MonoBehaviour
     void PuzzlePieceController_PuzzlePieceDraggedEvent(bool dragging) => DraggingPuzzlePiece = dragging;
     
     void Menu_TogglePauseEvent(bool paused) => TogglePause(paused);
+
+    void Menu_ChangeLocaleVent(int localeIdx)
+    {
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeIdx];
+    }
 
     void Menu_StartGameEvent() 
     {   

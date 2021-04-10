@@ -34,5 +34,17 @@ MonoBehaviour:
     m_Localized: Weiterspielen
     m_Metadata:
       m_Items: []
+  - m_Id: 2519857599152128
+    m_Localized: Anleitung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2676666649608192
+    m_Localized: Deutsch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2676738435121152
+    m_Localized: Englisch
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
