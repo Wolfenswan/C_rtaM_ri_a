@@ -8,22 +8,17 @@ public class SoundController : MonoBehaviour
     [SerializeField][Range(0f, 1f)] float _startVolume;
     private AudioSource _audioSourceA;
     private AudioSource _audioSourceB;
-    private int _audionumber;
+    private int _audioNumber;
     private float _crossfadeTime;
 
     void Awake()
     {
-        _audionumber = 0;
+        _audioNumber = 0;
         _audioSourceA = gameObject.AddComponent<AudioSource>();
         _audioSourceB = gameObject.AddComponent<AudioSource>();
         _audioSourceB.volume = Mathf.Clamp(_startVolume, 0, 1);
         _audioSourceA.volume = 0;
         _crossfadeTime = 6f;
-    }
-
-    void Start()
-    {
-        PlayNextAudio();
     }
 
     void OnEnable() 
@@ -52,21 +47,21 @@ public class SoundController : MonoBehaviour
 
     void MapCoverController_MapCoverRevealedEvent(GameObject mapCoverObject) => PlayNextAudio();
 
-    IEnumerator Crossfade(AudioSource a, AudioSource b, float _transitionTime)
+    IEnumerator Crossfade(AudioSource a, AudioSource b, float transitionTime)
     {
 
         // teilt die zeit und das volume in kleine st�cke
-        float _interval_size = 20f;
-        float _step_interval = _transitionTime / _interval_size;
-        float _vol_interval = a.volume / _interval_size;
+        float intervalSize = 20f;
+        float stepInterval = transitionTime / intervalSize;
+        float volInterval = a.volume / intervalSize;
 
         // audiosourceB bekommt den nachsten clip zum spielen
-        b.clip = audioClips[_audionumber];
-        _audionumber++;
+        b.clip = audioClips[_audioNumber];
+        _audioNumber++;
         // wenn _audionumber gro�er als das array ist, wirds auf 0 gesetzt
-        if (_audionumber >= audioClips.Length)
+        if (_audioNumber >= audioClips.Length)
         {
-            _audionumber = 0;
+            _audioNumber = 0;
         }
         b.Play();
 
@@ -74,10 +69,10 @@ public class SoundController : MonoBehaviour
         // und bei b hinzugefuegt. 
         for (int i = 0; i < 20; i++)
         {
-            a.volume -= _vol_interval;
-            b.volume += _vol_interval;
+            a.volume -= volInterval;
+            b.volume += volInterval;
 
-            yield return new WaitForSeconds(_step_interval);
+            yield return new WaitForSeconds(stepInterval);
         }
         a.Stop();
     }

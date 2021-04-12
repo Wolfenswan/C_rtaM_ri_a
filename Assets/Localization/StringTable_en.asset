@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 4680290fce9d3454cad5ac67af295700, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 6551613440
     m_Localized: 'Hello!
@@ -50,120 +51,135 @@ MonoBehaviour:
     m_Localized: "In the 16th century, the Hanseatic League had increasingly lost
       its importance. Instead, the Scandinavian royal houses, Russian principalities
       and England were now fighting for supremacy in the North and Baltic Seas.\r\n\r\nL\xFCbeck
-      in particular - the old center of the Hanseatic League - gradually lost its
-      position. But does this really mean that Lvbeca has to disappear from the map
-      altogether?"
+      in particular - the <b>old center</b> of the Hanseatic League - gradually lost
+      its position. But does this really mean that <b>Lvbeca</b> has to disappear
+      from the map altogether?"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 177646341521408
     m_Localized: 'Navigation at sea was difficult at that time. The magnetic compass
       had only become widespread since the 15th century, and the sextant was still
       200 years away.
 
 
-
       The ''Zirkel'' (German for drawing compass), on the
       other hand, was already known and appreciated as a navigational aid, measuring
-      not only German, but also Swedish and English miles on the map. Even today,
-      this type of compass is still used in seafaring as navigational aid.'
+      <b>not only German, but also Swedish and Italian miles</b> on the map. Even
+      today, this type of compass is still used in seafaring as navigational aid.'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 177744744087552
     m_Localized: "A sailor who went overboard could hope for little help. In order
       for a ship of his caravan to turn around for him, he had to be lucky enough
       to go overboard with important goods, such as pigs. \n\nOtherwise he would
       become - like this poor guy here - food for the fish. And sometimes also for
-      the rays."
+      the <b>rays</b>."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 177951594577920
     m_Localized: 'Danes and Low Germans have always been in a tumultuous relationship,
       marked as much by mutual trade as by wars.
 
 
-
-      A nice walk from the North
-      Sea to the Baltic Sea was therefore hardly possible without being reminded
-      of times of conflict. Especially in the form of the Danewerk near Schleswig,
-      which connected the coasts of both seas since about the seventh century.'
+      A <b>nice walk from the
+      North Sea to the Baltic Sea</b> was therefore hardly possible without being
+      reminded of times of conflict. Especially in the form of the Danewerk near
+      <b>Slesvig</b>, which connected the coasts of both seas since about the seventh
+      century.'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178016719536128
     m_Localized: Sweden had become the dominant power of the Baltic region in the
       16th century. The map pays tribute to this not only by the sheer size of Scandinavia,
-      but also by the prominent depiction of King Gustav I. But what is a ruler of
-      Svecia without his crowns?
+      but also by the prominent depiction of King Gustav I. But what is a <b>ruler
+      of Svecia</b> without his crowns?
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178118418825216
     m_Localized: "Reindeer are everywhere on the map: They were in the Scandinavian
       region coveted cargo and livestock, because they were able to cope with the
-      icy weather. \r\n\r\nAccording to the map, it even seems possible to overtake
-      a moving ship with them. But whether the ice is really strong enough to carry
-      these sleds from Finland and Sweden?"
+      icy weather. \r But whether the <b>ice is really strong</b> enough to carry
+      these sleds across the sea <b>from coast to coast</b>?"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178176505741312
-    m_Localized: "If one follows the map towards Russia, the depictions of troops
-      and battles pile up. The illustrations do not stand for specific conflicts,
-      but rather thematize an evolved conflict: \n\nIn the struggle for supremacy
-      in the Baltic Sea region, Sweden and the Principality of Moscow repeatedly
-      clashed. Their conflict extended into icy Finland, where these horsemen can
-      cross the sea thanks to a sheet of ice."
+    m_Localized: The Hanseatic area was by no means a peaceful space, as the depictions
+      of troops and battles testify. Again and again, Swedes and Russian princes
+      clashed in the struggle for supremacy.Apparently, one could also witness from
+      <b>freezing ships</b> how knights galloped across <b>the frozen sea</b> into
+      battle.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178215877672960
-    m_Localized: "In a dominant place directly under the North Pole, next to pagans
-      worshipping the sun and fire and their nomad tents, a legendary hero can be
-      seen. He carries his name on runic tablets: \"Starkad, the Swedish pugilist\".
+    m_Localized: "In a dominant place directly under the <b>North Pole</b>, next
+      to pagans worshipping the sun and fire and their nomad tents, a legendary hero
+      can be seen. He carries his name on runic tablets: \"Starkad, the Swedish pugilist\".
       \r\n\r\nThus, on the one hand, he symbolizes Sweden's claim to power, and on
       the other hand, the written tablets are supposed to prove Sweden's heritage
       as an ancient cultural nation."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178238195564544
     m_Localized: 'Whales were not uncommon in the North Sea and were hunted for opportunity
       for their meat. Nevertheless, they seemed "monstrous" to the people of that
-      time. They were believed to be able to pull an entire ship into the abyss and
+      time. They were believed to be able to pull a whole ship into the abyss and
       to form "disappearing islands" with their huge backs.
 
+      
 
-      This specimen
-      also fell victim to such a confusion. But can one reproach the English sailors
-      for not being quite so accurate between ice floes and sea monsters?'
+      This
+      specimen falls victim to such a confusion, when these English sailors sail
+      past <b>sea snakes and islands</b> on their way home, using maps and <b>compass
+      roses</b> '
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178250786865152
     m_Localized: "Pope Paul III imposed a ten-year printing privilege on the map,
       preventing its imitation and further distribution. The Venetian government
-      also issued a corresponding decree. \r\n\r\nAccordingly, the verbose text is
-      prominently reproduced on the map. But no matter in which direction one reads
-      the privileges,\nman-eating giant crayish, don't seem to be mentioned in or
-      around them."
+      also issued a corresponding decree. \r\n\r\nAccordingly, the <b>verbose text</b>
+      is prominently reproduced on the map. But no matter in <b>which direction</b>
+      one reads the privileges, man-eating giant crayish, don't seem to be mentioned
+      in or around them."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178265840222208
     m_Localized: "The English navigator Martin Frobisher undertook his first Arctic
-      voyage in the year 76 of the sixteenth century with 3 ships, in search of a
-      Northwest Passage. But not only weather and mystical mythical creatures were
-      a danger for the sailors of the North Sea. Other sailors also preyed on their
-      ships.\n\nOne wonders what the crew of the L\xFCbeck three-master was thinking
-      as they sailed directly toward this battle between Hamburg and Scottish crews
-      in their flight from whales.\"\n\nTranslated with www.DeepL.com/Translator
-      (free version)"
+      voyage in the <b>year 76</b> of the sixteenth century with <b>3</b> ships,
+      in <b>search of a northwest-passage</b>. But not only weather and mystical
+      mythical creatures were a danger for the sailors of the North Sea. Other sailors
+      also preyed on their ships.\n\nOne wonders what the crew of the L\xFCbeck three-master
+      was thinking as they sailed directly toward this battle between Hamburg and
+      Scottish crews in their flight from whales.\""
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178287956787200
     m_Localized: "Despite the centuries-old tradition of seafaring, the sea remained
       a fearsome force. Not only tools or cargo disappeared in its depths. \n\nEven
       entire ships are said to have been dragged into the depths by maelstroms. No
-      wonder that nearby a devil is already sweeping his stable."
+      wonder that <b>near the coast a devil is already sweeping his stable</b>."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178303937085440
     m_Localized: Thick sheets of ice often prevented the seafarers from getting through
       in the icy northern sea. These "locals", however, had less of a problem.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a200000000d59e2aa20000000055e626a20000000015c021a200000000d53e1ea20000000055501ba20000

@@ -16,11 +16,17 @@ public class CameraController : MonoBehaviour
     void Awake() 
     {
         _cam = GetComponent<Camera>();
+        _zoomClamp = _data.MouseZoomClampRange;
     }
 
-    void Start()
+    void OnEnable() 
     {
-        _zoomClamp = _data.MouseZoomClampRange;
+       MapCoverController.MapCoverRevealedEvent += MapCoverController_MapCoverRevealedEvent;
+    }
+
+    void OnDisable() 
+    {
+        MapCoverController.MapCoverRevealedEvent -= MapCoverController_MapCoverRevealedEvent;
     }
 
     void Update()
@@ -46,7 +52,7 @@ public class CameraController : MonoBehaviour
             if (targetOrthoSize != _cam.orthographicSize && zoom > 0) MoveCameraToZoom(cursorWorldPos, zoom);
             _cam.orthographicSize = targetOrthoSize;
         }
-        if (buttonDown || buttonHeld && !GameManager.DraggingPuzzlePiece && !RaycastUtilities.IsPoint2DOverElementWithTag(cursorPos, "UIPuzzlePanel")) // IsPointerOverUIElement(cursorPos)
+        if (buttonDown || buttonHeld && GameManager.GameInProgess && !GameManager.DraggingPuzzlePiece && !RaycastUtilities.IsPoint2DOverElementWithTag(cursorPos, "UIPuzzlePanel")) // IsPointerOverUIElement(cursorPos)
         {
             PanCamera(buttonDown, buttonHeld, cursorWorldPos);
             //if (_hintBox.IsVisible) _hintBox.ToggleHintBoxVisibility(false); // TODO test if this is actually desireable
@@ -70,5 +76,10 @@ public class CameraController : MonoBehaviour
             difference.z = 0f;
             transform.position += difference;
         }
+    }
+    void MapCoverController_MapCoverRevealedEvent(GameObject MapCoverObject)
+    {   
+        // Update the max zoom range according to the revealed map cover
+        _zoomClamp.Max = MapCoverObject.GetComponent<MapCoverController>().MaxZoom;
     }
 }

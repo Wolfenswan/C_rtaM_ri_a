@@ -9,8 +9,11 @@ public class MapCoverController : MonoBehaviour
     public static event Action<GameObject> MapCoverRevealedEvent;
 
     [SerializeField] CartaData _data;
+    [SerializeField] int _maxZoomAfterReveal = 20;
     [SerializeField] List<GameObject> _piecesRequired;
     [SerializeField] List<GameObject> _piecesToReveal;
+
+    public int MaxZoom{get=>_maxZoomAfterReveal;}
 
     SpriteRenderer _spriteRenderer;
     bool _fading = false;
@@ -55,6 +58,9 @@ public class MapCoverController : MonoBehaviour
     {
         var elapsedTime = 0.0f;
         var color = _spriteRenderer.color;
+
+        MapCoverRevealedEvent?.Invoke(gameObject);
+
         foreach (var item in _piecesToReveal)
         {   
             item?.SetActive(true);
@@ -68,7 +74,6 @@ public class MapCoverController : MonoBehaviour
             _spriteRenderer.color = color;
         }
 
-        MapCoverRevealedEvent?.Invoke(gameObject);
         gameObject.SetActive(false);
     }
 }

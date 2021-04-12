@@ -83,7 +83,5 @@ public class GameManager : MonoBehaviour
             GameInProgess = true;
             _firstMapCover.GetComponent<MapCoverController>().FadeOut();
         }
-        // else if (BackToMainMenu)
-        // SceneManager.LoadScene(0); + GameInProgess = false;
     }
 }

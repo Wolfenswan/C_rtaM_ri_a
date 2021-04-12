@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: de
   m_SharedData: {fileID: 11400000, guid: 4680290fce9d3454cad5ac67af295700, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 6551613440
     m_Localized: "Hallo!\n\nSch\xF6n, dass du C_rta M_ri_a spielst.\n\nNavigiere
@@ -31,110 +32,125 @@ MonoBehaviour:
     m_Localized: "Im 16. Jahrhundert hatte die Hanse zunehmend an Bedeutung verloren.
       Stattdessen stritten sich nun die skandinavischen K\xF6nigsh\xE4user, russische
       F\xFCrstent\xFCmer und England um die Vorherrschaft in Nord- und Ostsee.\n\nGerade
-      L\xFCbeck - der alte Mittelpunkt der Hanse - verlor seine Stellung nach und
-      nach. Aber muss Lvbeca deswegen gleich ganz von der Karte verschwinden?"
+      L\xFCbeck - der <b>alte Mittelpunkt</b> der Hanse - verlor seine Stellung nach
+      und nach. Aber muss <b>Lvbeca</b> deswegen gleich ganz von der Karte verschwinden?"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 177646341521408
     m_Localized: "Die Navigation zur See war damals schwierig. Der Kompass hatte
       sich erst seit dem 15. Jahrhundert verbreitet, der Sextant lie\xDF noch knapp
       200 Jahre auf sich warten.\r\n\r\nAls Navigationsmittel bekannt und gesch\xE4tzt
-      war dagegen schon  dieser Zirkel, der auf der Karte nicht nur deutsche, sondern
-      auch schwedische und englische Meilen misst. Noch heute werden in der Seefahrt
-      Zirkel als Hilfsmittel bei der Navigation verwendet."
+      war dagegen schon  dieser Zirkel, der auf der Karte <b>nicht nur deutsche,
+      sondern auch schwedische und italienische Meilen</b> misst. Noch heute werden
+      in der Seefahrt Zirkel als Hilfsmittel bei der Navigation verwendet."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 177744744087552
     m_Localized: "Ein Seemann, der \xFCber Bord ging konnte nur auf wenig Hilfe hoffen.
       Damit ein Schiff seiner Karawane f\xFCr ihn umdrehte, musste er schon das Gl\xFCck
       haben mit wichtigen Waren - etwa Schweinen - \xFCber Bord zu gehen. \n\nAnsonsten
       w\xFCrde er - wie dieser arme Kerl hier - Futter f\xFCr die Fische. Und manchmal
-      auch f\xFCr die Rochen."
+      auch f\xFCr die <b>Rochen</b>."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 177951594577920
     m_Localized: "D\xE4nen und Niederdeutsche standen seit jeher in einem tumulten
       Verh\xE4ltnis, das ebenso von wechselseitigem Handel wie Kriegen gepr\xE4gt
-      wurde.\n\nEin netter Spaziergang von der Nord- zur Ostsee war deshalb kaum
-      m\xF6glich, ohne an konfliktreiche Zeiten erinnert zu werden. Insbesondere
-      in Form des Danewerks bei Schleswig, das seit etwa dem siebten Jahrhundert
+      wurde.\n\nEin netter <b>Spaziergang von der Nord- zur Ostsee</b> war deshalb
+      kaum m\xF6glich, ohne an konfliktreiche Zeiten erinnert zu werden. Insbesondere
+      in Form des Danewerks bei <b>Slesvig</b>, das seit etwa dem siebten Jahrhundert
       die K\xFCsten beider Meere verband."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178016719536128
     m_Localized: "Schweden war im 16. Jahrhundert zur dominanten Macht des baltischen
       Raums geworden. Dem zollt die Karte nicht nur durch die schiere Gr\xF6\xDFe
       Skandinaviens Rechnung, sondern auch die prominente Darstellung K\xF6nig Gustavs
-      I. Aber was ist ein Herrscher Svecias ohne seine Kronen?"
+      I. Aber was ist ein <b>Herrscher Svecias</b> ohne seine Kronen?"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178118418825216
     m_Localized: "Rentiere tummeln sich \xFCberall auf der Karte: Sie waren im skandinavischen
       Raum begehrte Lasten- und Nutztiere, da sie der eisigen Witterung gewachsen
-      waren. \n\nLaut Karte scheint es sogar m\xF6glich, mit Ihnen ein fahrendes
-      Schiff zu \xFCberholen. Aber ob das Eis wirklich stark genug ist, um diese
-      Schlitten von Finnland und Schweden zu tragen?"
+      waren. Aber ob das <b>Eis wirklich stark</b> genug ist, um diese Schlitten
+      \xFCber das Meer <b>von K\xFCste zu K\xFCste</b> zu tragen?"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178176505741312
-    m_Localized: "Folgt man der Karte gen Russland, h\xE4ufen sich die Darstellungen
-      von Truppen und Schlachten. Die Abbildungen stehen nicht f\xFCr bestimmte Auseinandersetzungen,
-      sondern thematisieren einen gewachsenen Konflikt: \n\nIm Kampf um die Voherrschaft
-      im Ostseeraum gerieten Schweden und das F\xFCrstentum Moskau wiederholt aneinander.
-      Ihr Konflikt erstreckte sich bis in das eisige Finnland hinein, wo diese Reiter
-      dank einer Eisdecke die See \xFCberqueren k\xF6nnen."
+    m_Localized: "Das Hanse-Gebiet war keineswegs ein friedlicher Raum, wie die Darstellungen
+      von Truppen und Schlachten bezeugen. Immer wieder waren Schweden und russische
+      F\xFCrsten im Kampf um die Vorherrschaft aneinandergeraten. Scheinbar konnte
+      man von <b>eingeeisten Schiffen</b> auch Zeuge werden, wie Ritter \xFCber <b>die
+      gefrorene See</b> in die Schlacht galoppierten."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178215877672960
-    m_Localized: "An dominanter Stelle direkt unter dem Nordpol ist neben Heiden,
-      die Sonne und Feuer anbeten, und ihren Nomadenzelten ein sagenhafter Held zu
-      sehen. Seinen Namen tr\xE4gt er auf Runentafeln bei sich: \"Starkad, der schwedische
-      Faustk\xE4mpfer\". \n\nEr symbolisiert so einerseits Schwedens Machtanspruch,
-      andererseits sollen die Schrifttafeln beweisen, dass es sich bei Schweden um
-      eine alte Kulturnation handelt."
+    m_Localized: "An dominanter Stelle direkt unter <b>dem Nordpol</b> ist neben
+      Heiden, die Sonne und Feuer anbeten, und ihren Nomadenzelten ein sagenhafter
+      Held zu sehen. Seinen Namen tr\xE4gt er auf Runentafeln bei sich: \"Starkad,
+      der schwedische Faustk\xE4mpfer\". \n\nEr symbolisiert so einerseits Schwedens
+      Machtanspruch, andererseits sollen die Schrifttafeln beweisen, dass es sich
+      bei Schweden um eine alte Kulturnation handelt."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178238195564544
     m_Localized: "Wale waren in der Nordsee zwar keine Seltenheit und wurden nach
       Gelegenheit f\xFCr ihr Fleisch gejagt. Dennoch wirkten sie \"ungeheuerlich\"
       auf die damaligen Menschen. Durchaus traute man ihnen zu, ein ganzes Schiff
       in den Abgrund ziehen zu k\xF6nnen und mit ihren riesigen R\xFCcken \"verschwindende
-      Inseln\" zu bilden.\r\n\r\nAuch dieses Exemplar fiel einer solchen Verwechslung
-      zum Opfer. Aber kann man den englischen Matrosen vorwerfen, es zwischen Eisschollen
-      und Seeungeheuern nicht ganz so genau zu nehmen?"
+      Inseln\" zu bilden.\r\n\r\nAuch dieses Exemplar f\xE4llt einer solchen Verwechslung
+      zum Opfer, als diese englische Matrosen auf ihrem Heimweg mithilfe von Karten
+      und <b>Kompassrosen an Seeschlangen und Inseln</b> vorbeisegeln."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178250786865152
     m_Localized: "Papst Paul III. belegte die Karte mit einem zehn Jahre w\xE4hrenden
       Druckprivileg, das die Nachahmung und Weiterverbreitung verhinderte. Auch die
       venezianische Regierung erlie\xDF eine entsprechende Verordnung. \n\nEntsprechend
-      prominent ist der wortreiche Text auf der Karte wiedergegeben. Doch egal in
-      welche Richtung man die Priviligien liest, von\r\nmenschenfressenden Riesenlangusten
-      ist in ihnen - oder um sie herum - nichts zu lesen."
+      prominent ist der <b>wortreiche Text</b> auf der Karte wiedergegeben. Doch
+      egal in <b>welche Richtung</b> man die Priviligien liest, von\r menschenfressenden
+      Riesenlangusten ist in ihnen - oder um sie herum - nichts zu lesen."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178265840222208
-    m_Localized: "Der englische Seefahrer Martin Frobisher unternahm im Jahr 76 des
-      sechzehnten Jahrhunderts mit 3 Schiffen seine erste Arktisfahrt, auf der Suche
-      nach einer Nordwestpassage. Doch nicht nur Witterung und mystische Fabelwesen
-      waren eine Gefahr f\xFCr die Segler des Nordmeers. Auch andere Seefahrer machten
-      Jagd auf ihre Schiffe.\r\n\r\nWas wohl die Mannschaft des L\xFCbecker Dreimasters
-      dachte, als sie auf ihrer Flucht vor Walen direkt auf diese Schlacht zwischen    
-      hamburgischen und schottischen Mannschaften zusegelte?\""
+    m_Localized: "Der englische Seefahrer Martin Frobisher unternahm im <b>Jahr 76</b>
+      des sechzehnten Jahrhunderts mit <b>3</b> Schiffen seine erste Arktisfahrt,
+      auf der <b>Suche nach einer Nordwestpassage</b>. Doch nicht nur Witterung und
+      mystische Fabelwesen waren eine Gefahr f\xFCr die Segler des Nordmeers. Auch
+      andere Seefahrer machten Jagd auf ihre Schiffe.\r\n\r\nWas wohl die Mannschaft
+      des L\xFCbecker Dreimasters dachte, als sie auf ihrer Flucht vor Walen direkt
+      auf diese Schlacht zwischen hamburgischen und schottischen Mannschaften zusegelte?\""
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178287956787200
     m_Localized: "Trotz der jahrhundertealten Tradition der Seefahrt blieb das Meer
       eine furchteinfl\xF6\xDFende Gewalt. In dessen Tiefen verschwanden nicht nur
       Werkzeug oder Fracht. \n\nSogar ganze Schiffe sollen durch Mahlstr\xF6me in
-      die Tiefe gezogen worden sein. Kein Wunder, dass ein Teufel in Unweite seinen
-      Stall bereits besenrein macht."
+      die Tiefe gezogen worden sein. Kein Wunder, dass <b>in Unweite der K\xFCste
+      ein Teufel seinen Stall</b> besenrein kehrt."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 178303937085440
     m_Localized: Dicke Eisplatten verhinderten im eisigen Nordmeer den Seefahrern
       oft das Durchkommen. Die "Einheimischen" hatten dieses Problem jedoch weniger.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a20000000055501ba200000000d53e1ea20000000015c021a20000000055e626a200000000d59e2aa20000

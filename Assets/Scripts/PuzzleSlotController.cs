@@ -28,8 +28,7 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
         
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
-        //_clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();
-        
+        //_clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();  
         _cGroup.alpha = _defaultAlpha;
     }
 
