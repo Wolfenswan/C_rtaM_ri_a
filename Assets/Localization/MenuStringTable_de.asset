@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 5521080320
-    m_Localized: Neues Spiel starten
+    m_Localized: Neues Spiel
     m_Metadata:
       m_Items: []
   - m_Id: 66506260480

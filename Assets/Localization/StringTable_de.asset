@@ -21,13 +21,15 @@ MonoBehaviour:
   m_TableData:
   - m_Id: 6551613440
     m_Localized: "Hallo!\n\nSch\xF6n, dass du C_rta M_ri_a spielst.\n\nNavigiere
-      die Karte einfach durch Klicken & Ziehen des Cursors und zoome mit dem Mausrad.
-      Mit ESC kommst du zum Men\xFC zur\xFCck.\n\nZum Spielen musst du die Bilder
-      aus der unteren Leiste an ihre richtige Stelle in der Karte ziehen.\n\nWenn
-      du auf eines der Bilder klickst, bekommst du einen Hinweis. Klicke dann erneut
-      auf das Bild, um die Karte wieder ganz zu sehen.\n\nViel Spa\xDF!"
+      die Karte einfach durch <b>Klicken & Ziehen des Cursors</b> und zoome mit dem
+      <b>Mausrad</b>. Mit <b>ESC</b> kommst du in das Hauptmen\xFC zur\xFCck.\n\nZum
+      Spielen ziehe die Bilder aus der unteren Leiste an ihre richtige Stelle in
+      der Karte.\n\nWenn du auf eines der Bilder klickst, bekommst du einen Hinweis.
+      Klicke dann erneut auf das Bild, um die Karte wieder ganz zu sehen.\n\nViel
+      Spa\xDF!"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 1352335994880
     m_Localized: "Im 16. Jahrhundert hatte die Hanse zunehmend an Bedeutung verloren.
       Stattdessen stritten sich nun die skandinavischen K\xF6nigsh\xE4user, russische
@@ -58,8 +60,8 @@ MonoBehaviour:
       - id: 0
   - m_Id: 177951594577920
     m_Localized: "D\xE4nen und Niederdeutsche standen seit jeher in einem tumulten
-      Verh\xE4ltnis, das ebenso von wechselseitigem Handel wie Kriegen gepr\xE4gt
-      wurde.\n\nEin netter <b>Spaziergang von der Nord- zur Ostsee</b> war deshalb
+      Verh\xE4ltnis, das ebenso von wechselseitigem Handel wie von Kriegen gepr\xE4gt
+      wurde.\n\nEin netter Spaziergang <b>von der Nord- zur Ostsee</b> war deshalb
       kaum m\xF6glich, ohne an konfliktreiche Zeiten erinnert zu werden. Insbesondere
       in Form des Danewerks bei <b>Slesvig</b>, das seit etwa dem siebten Jahrhundert
       die K\xFCsten beider Meere verband."
@@ -70,7 +72,7 @@ MonoBehaviour:
     m_Localized: "Schweden war im 16. Jahrhundert zur dominanten Macht des baltischen
       Raums geworden. Dem zollt die Karte nicht nur durch die schiere Gr\xF6\xDFe
       Skandinaviens Rechnung, sondern auch die prominente Darstellung K\xF6nig Gustavs
-      I. Aber was ist ein <b>Herrscher Svecias</b> ohne seine Kronen?"
+      I. \n\nAber was ist ein <b>Herrscher Svecias</b> ohne seine Kronen?"
     m_Metadata:
       m_Items:
       - id: 0
@@ -85,15 +87,15 @@ MonoBehaviour:
   - m_Id: 178176505741312
     m_Localized: "Das Hanse-Gebiet war keineswegs ein friedlicher Raum, wie die Darstellungen
       von Truppen und Schlachten bezeugen. Immer wieder waren Schweden und russische
-      F\xFCrsten im Kampf um die Vorherrschaft aneinandergeraten. Scheinbar konnte
-      man von <b>eingeeisten Schiffen</b> auch Zeuge werden, wie Ritter \xFCber <b>die
-      gefrorene See</b> in die Schlacht galoppierten."
+      F\xFCrsten im Kampf um die Vorherrschaft aneinandergeraten. So wurden Matrosen
+      von <b>Eis umschlossenen Schiffen</b> Zeuge davon, wie Ritter \xFCber <b>die
+      gefrorene See</b> in die Schlacht galoppieren."
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178215877672960
-    m_Localized: "An dominanter Stelle direkt unter <b>dem Nordpol</b> ist neben
-      Heiden, die Sonne und Feuer anbeten, und ihren Nomadenzelten ein sagenhafter
+    m_Localized: "An dominanter Stelle direkt unter <b>dem magnetischen Nordpol</b>
+      ist neben Heiden, die Sonne und Feuer anbeten und ihren Nomadenzelten ein sagenhafter
       Held zu sehen. Seinen Namen tr\xE4gt er auf Runentafeln bei sich: \"Starkad,
       der schwedische Faustk\xE4mpfer\". \n\nEr symbolisiert so einerseits Schwedens
       Machtanspruch, andererseits sollen die Schrifttafeln beweisen, dass es sich
@@ -117,7 +119,7 @@ MonoBehaviour:
       Druckprivileg, das die Nachahmung und Weiterverbreitung verhinderte. Auch die
       venezianische Regierung erlie\xDF eine entsprechende Verordnung. \n\nEntsprechend
       prominent ist der <b>wortreiche Text</b> auf der Karte wiedergegeben. Doch
-      egal in <b>welche Richtung</b> man die Priviligien liest, von\r menschenfressenden
+      egal in <b>welche Richtung</b> man die Priviligien liest, von\r  \nmenschenfressenden
       Riesenlangusten ist in ihnen - oder um sie herum - nichts zu lesen."
     m_Metadata:
       m_Items:
@@ -126,24 +128,22 @@ MonoBehaviour:
     m_Localized: "Der englische Seefahrer Martin Frobisher unternahm im <b>Jahr 76</b>
       des sechzehnten Jahrhunderts mit <b>3</b> Schiffen seine erste Arktisfahrt,
       auf der <b>Suche nach einer Nordwestpassage</b>. Doch nicht nur Witterung und
-      mystische Fabelwesen waren eine Gefahr f\xFCr die Segler des Nordmeers. Auch
-      andere Seefahrer machten Jagd auf ihre Schiffe.\r\n\r\nWas wohl die Mannschaft
-      des L\xFCbecker Dreimasters dachte, als sie auf ihrer Flucht vor Walen direkt
-      auf diese Schlacht zwischen hamburgischen und schottischen Mannschaften zusegelte?\""
+      mystische Fabelwesen waren eine Gefahr f\xFCr die Segler des Nordmeers; auch
+      andere Seefahrer machten Jagd auf ihre Schiffe.\r"
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178287956787200
     m_Localized: "Trotz der jahrhundertealten Tradition der Seefahrt blieb das Meer
-      eine furchteinfl\xF6\xDFende Gewalt. In dessen Tiefen verschwanden nicht nur
+      eine furchteinfl\xF6\xDFende Gewalt. In seinen Tiefen verschwanden nicht nur
       Werkzeug oder Fracht. \n\nSogar ganze Schiffe sollen durch Mahlstr\xF6me in
-      die Tiefe gezogen worden sein. Kein Wunder, dass <b>in Unweite der K\xFCste
+      den Abgrund gezogen worden sein. Kein Wunder, dass <b>in Unweite der K\xFCste
       ein Teufel seinen Stall</b> besenrein kehrt."
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178303937085440
-    m_Localized: Dicke Eisplatten verhinderten im eisigen Nordmeer den Seefahrern
+    m_Localized: <b>Dicke Eisplatten</b> verhinderten im eisigen Nordmeer den Seefahrern
       oft das Durchkommen. Die "Einheimischen" hatten dieses Problem jedoch weniger.
     m_Metadata:
       m_Items:
@@ -153,4 +153,4 @@ MonoBehaviour:
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a20000000055501ba200000000d53e1ea20000000015c021a20000000055e626a200000000d59e2aa20000
+        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a20000000055501ba200000000d53e1ea20000000015c021a20000000055e626a200000000d59e2aa2000000b0818601000000

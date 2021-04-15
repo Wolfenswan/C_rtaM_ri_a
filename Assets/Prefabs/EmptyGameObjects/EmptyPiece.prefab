@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7273425103146806529}
   - component: {fileID: 7273425103146806528}
   - component: {fileID: 7273425103146806531}
+  - component: {fileID: 1566514204774130301}
   m_Layer: 5
   m_Name: EmptyPiece
   m_TagString: UIElement
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -90,6 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DroppedInSlot: 0
+  _data: {fileID: 11400000, guid: 8845b226f90a1434093ace21d487403d, type: 2}
+  _puzzleCanvas: {fileID: 0}
   _localizedString:
     m_TableReference:
       m_TableCollectionName: 
@@ -97,7 +100,6 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
-  _data: {fileID: 11400000, guid: 8845b226f90a1434093ace21d487403d, type: 2}
 --- !u!225 &7273425103146806531
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -110,3 +112,15 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1566514204774130301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273425103146806533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f7baa6936fb554ea1f053da3ddc443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

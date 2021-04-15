@@ -25,7 +25,6 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
     void Awake()
     {   
         _cGroup = GetComponent<CanvasGroup>();
-        
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
         //_clickBox = transform.Find("ClickBox").GetComponent<ClickBoxController>();  
@@ -73,8 +72,9 @@ public class PuzzleSlotController : MonoBehaviour//, IDropHandler
             _cGroup.alpha = Mathf.Clamp01(elapsedTime / _data.SlotFadeInTime);
         }
         Play();
-        _clickBox.OnPointerClickEvent += ClickBox_OnPointerClickEvent;
         _activated = true;
+        _clickBox.OnPointerClickEvent += ClickBox_OnPointerClickEvent;
+        _clickBox.gameObject.AddComponent<CursorChangeTrigger>();
     }
 
     void ClickBox_OnPointerClickEvent()

@@ -59,15 +59,10 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     }
     void ToggleGlow(bool enable)
     {
-        if (enable)
-        {            
-            if (_image.color != _glowColor) _image.color = _glowColor;
-        }
-        else
-        {   
-            if (_image.color != _defaultColor) _image.color = _defaultColor;
-        }
-            
+        if (enable && _image.color != _glowColor)        
+            _image.color = _glowColor;
+        else if (!enable && _image.color != _defaultColor)
+            _image.color = _defaultColor;            
     }
     
     void UpdateLocalizedString(string newString) => _localizedHintText = newString;
@@ -100,11 +95,7 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
 
     public void OnPointerClick(PointerEventData eventData)
     {   
-        //var enableHint = !(_hintBoxTextField.text == _hintText) || (int) _hintBoxCanvasGroup.alpha == 0;
-        //var enableHint = !(_hintBoxTextField.text == _localizedHintText) || (int) _hintBoxCanvasGroup.alpha == 0;
-        //ToggleHint(enableHint);
         ToggleHintEvent?.Invoke(_localizedHintText, false);
-        //HintBoxToggled?.Invoke(_hintBox); // // TODO rewrite this into own HintBoxController
     }
     #endregion
 

@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ButtonText
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f5b83a79bbe9eb642a2117337be08547, type: 2}
-  m_sharedMaterial: {fileID: -8256041981373446334, guid: f5b83a79bbe9eb642a2117337be08547, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b69b926b5b4134040b2034d10a3e9c10, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: b69b926b5b4134040b2034d10a3e9c10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,13 +93,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 4036252825907528626}
   - component: {fileID: 6728144125525175856}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_TMPDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,26 +27,24 @@ MonoBehaviour:
       We''re happy that you are playing C_rta M_ri_a.
 
 
-
       Simply
-      navigate the map by clicking & dragging the cursor. You can also zoom using
-      the mouse wheel. You can return to the menu using ESC.
+      navigate the map by <b>clicking & dragging</b>. You can also zoom using the
+      <b>mouse wheel</b>. You can return to the menu using <b>ESC</b>.
 
 
-
-      To play, you
-      need to drag the images from the bottom bar to their correct place on the map.
-
+      To
+      play, drag the images from the bottom bar to their correct place on the map.
 
 
       When
-      you click on one of the images, you will get a hint. To hide this hint again
-      simply click on the picture another time.
+      you click on one of the images, you will get a hint. To hide the hint simply
+      click on the picture again.
 
 
       Have fun!'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 1352335994880
     m_Localized: "In the 16th century, the Hanseatic League had increasingly lost
       its importance. Instead, the Scandinavian royal houses, Russian principalities
@@ -84,46 +82,46 @@ MonoBehaviour:
       marked as much by mutual trade as by wars.
 
 
-      A <b>nice walk from the
+      A nice walk <b>from the
       North Sea to the Baltic Sea</b> was therefore hardly possible without being
       reminded of times of conflict. Especially in the form of the Danewerk near
-      <b>Slesvig</b>, which connected the coasts of both seas since about the seventh
+      <b>Slesvig</b>, which connects the coasts of both seas since roughly the seventh
       century.'
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178016719536128
-    m_Localized: Sweden had become the dominant power of the Baltic region in the
+    m_Localized: "Sweden had become the dominant power of the Baltic region in the
       16th century. The map pays tribute to this not only by the sheer size of Scandinavia,
-      but also by the prominent depiction of King Gustav I. But what is a <b>ruler
-      of Svecia</b> without his crowns?
+      but also by the prominent depiction of King Gustav I. \n\nBut what is a <b>ruler
+      of Svecia</b> without his crowns?"
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178118418825216
-    m_Localized: "Reindeer are everywhere on the map: They were in the Scandinavian
-      region coveted cargo and livestock, because they were able to cope with the
-      icy weather. \r But whether the <b>ice is really strong</b> enough to carry
-      these sleds across the sea <b>from coast to coast</b>?"
+    m_Localized: "Reindeer are everywhere on the map: They were coveted cargo and
+      livestock in Scandinavia, because they were able to cope with the icy weather.
+      \r \n\nBut whether the <b>ice is really strong</b> enough to carry these sleds
+      across the sea <b>from coast to coast</b>?"
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178176505741312
     m_Localized: The Hanseatic area was by no means a peaceful space, as the depictions
       of troops and battles testify. Again and again, Swedes and Russian princes
-      clashed in the struggle for supremacy.Apparently, one could also witness from
-      <b>freezing ships</b> how knights galloped across <b>the frozen sea</b> into
-      battle.
+      clashed in the struggle for supremacy. Apparently, some sailors on <b>ice-enclosed
+      ships</b> even bore witness to knights galloping into battle across <b>the
+      frozen sea</b>.
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178215877672960
-    m_Localized: "In a dominant place directly under the <b>North Pole</b>, next
-      to pagans worshipping the sun and fire and their nomad tents, a legendary hero
-      can be seen. He carries his name on runic tablets: \"Starkad, the Swedish pugilist\".
-      \r\n\r\nThus, on the one hand, he symbolizes Sweden's claim to power, and on
-      the other hand, the written tablets are supposed to prove Sweden's heritage
-      as an ancient cultural nation."
+    m_Localized: "In a dominant place directly beneath the <b>magnetic North Pole</b>,
+      next to pagans worshipping the sun and fire and their nomad tents, a legendary
+      hero can be seen. He carries his name on runic tablets: \"Starkad, the Swedish
+      pugilist\". \r\n\r\nThus, on the one hand, he symbolizes Sweden's claim to
+      power, and on the other hand, the written tablets are supposed to prove Sweden's
+      heritage as an ancient cultural nation."
     m_Metadata:
       m_Items:
       - id: 0
@@ -133,12 +131,11 @@ MonoBehaviour:
       time. They were believed to be able to pull a whole ship into the abyss and
       to form "disappearing islands" with their huge backs.
 
-      
 
-      This
-      specimen falls victim to such a confusion, when these English sailors sail
-      past <b>sea snakes and islands</b> on their way home, using maps and <b>compass
-      roses</b> '
+
+      This specimen
+      falls victim to such a confusion, when these English sailors sail past <b>sea
+      snakes and islands</b> on their way home, using maps and <b>compass roses</b> '
     m_Metadata:
       m_Items:
       - id: 0
@@ -147,33 +144,31 @@ MonoBehaviour:
       preventing its imitation and further distribution. The Venetian government
       also issued a corresponding decree. \r\n\r\nAccordingly, the <b>verbose text</b>
       is prominently reproduced on the map. But no matter in <b>which direction</b>
-      one reads the privileges, man-eating giant crayish, don't seem to be mentioned
+      one reads the privileges, man-eating giant crayfish, don't seem to be mentioned
       in or around them."
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178265840222208
-    m_Localized: "The English navigator Martin Frobisher undertook his first Arctic
+    m_Localized: The English navigator Martin Frobisher undertook his first Arctic
       voyage in the <b>year 76</b> of the sixteenth century with <b>3</b> ships,
       in <b>search of a northwest-passage</b>. But not only weather and mystical
-      mythical creatures were a danger for the sailors of the North Sea. Other sailors
-      also preyed on their ships.\n\nOne wonders what the crew of the L\xFCbeck three-master
-      was thinking as they sailed directly toward this battle between Hamburg and
-      Scottish crews in their flight from whales.\""
+      mythical creatures were a danger for the sailors of the North Sea; other sailors
+      also preyed on their ships.
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178287956787200
     m_Localized: "Despite the centuries-old tradition of seafaring, the sea remained
       a fearsome force. Not only tools or cargo disappeared in its depths. \n\nEven
-      entire ships are said to have been dragged into the depths by maelstroms. No
+      entire ships are said to have been dragged into the abyss by maelstroms. No
       wonder that <b>near the coast a devil is already sweeping his stable</b>."
     m_Metadata:
       m_Items:
       - id: 0
   - m_Id: 178303937085440
-    m_Localized: Thick sheets of ice often prevented the seafarers from getting through
-      in the icy northern sea. These "locals", however, had less of a problem.
+    m_Localized: <b>Thick sheets of ice</b> often prevented the seafarers from getting
+      through in the icy northern sea. These "locals", however, had less of a problem.
     m_Metadata:
       m_Items:
       - id: 0
@@ -182,4 +177,4 @@ MonoBehaviour:
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a200000000d59e2aa20000000055e626a20000000015c021a200000000d53e1ea20000000055501ba20000
+        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a200000000d59e2aa20000000055e626a20000000015c021a200000000d53e1ea20000000055501ba2000000b0818601000000

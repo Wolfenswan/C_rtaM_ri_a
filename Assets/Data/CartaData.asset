@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseZoomSpeed: 0.6
   MouseZoomClampRange:
-    Min: 10
-    Max: 30
+    Min: 5
+    Max: 10
   AlphaBlendSpeed: 0
   SlotFadeInTime: 1
   CoverFadeOutTime: 3
+  PuzzlePieceGlowColor: {r: 255, g: 255, b: 255, a: 1}

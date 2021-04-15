@@ -4,21 +4,22 @@ using UnityEngine.Localization.Settings;
 
 public class GameManager : MonoBehaviour
 {
-    // No need to make the entire GameManager a Singleton and persistent across scenes; the static variables work perfectly fine for now
-    public static bool DraggingPuzzlePiece{get; private set;} //* CONSIDER: Better here or directly in CameraController?
+    // No need to make the entire GameManager a Singleton and persistent across scenes; properly managing the static variables works perfectly fine for now
+    public static bool DraggingPuzzlePiece{get; private set;}
     public static bool GameInProgess{get; private set;}
     public static bool GameIsPaused{get => (Time.timeScale == 0);}
     
     [SerializeField] GameObject _firstMapCover;
     [SerializeField] MenuController _menuController;
     [SerializeField] CanvasGroup _puzzlePiecesCanvasGroup;
-    
+
+    [SerializeField] Texture2D _hoverCursorTexture = null;
+    Texture2D _defaultCursorTexture;
+
     public static Camera MainCamera{get; private set;}
 
     void Awake() 
     {   
-        //_menuController = GameObject.FindGameObjectWithTag("UIMainMenu").GetComponent<MenuController>();
-        //_puzzleUICanvasGroup = GameObject.FindGameObjectWithTag("UIPuzzlePieces").GetComponent<CanvasGroup>();
         MainCamera = Camera.main; // Cached to avoid expensive lookups during runtime
     }
 
@@ -26,26 +27,28 @@ public class GameManager : MonoBehaviour
     {   
         _menuController.ToggleMenuVisibility(!GameInProgess);
         _puzzlePiecesCanvasGroup.alpha = GameInProgess?1:0;
-        
-        if (!_firstMapCover.activeSelf)
+
+        if (!_firstMapCover.activeSelf) // Safety check in case the first cover was disabled during development
             _firstMapCover.SetActive(true);
-        if (GameInProgess)
+        if (GameInProgess) // If re-starting the game after the first game, the menu won't be active and the first cover should fade out right away
             _firstMapCover.GetComponent<MapCoverController>().FadeOut();
     }
 
     void OnEnable() 
     {
         PuzzlePieceController.PuzzlePieceDraggedEvent += PuzzlePieceController_PuzzlePieceDraggedEvent; //* CONSIDER: Move into CameraController
-        _menuController.StartGameEvent += Menu_StartGameEvent;
-        _menuController.TogglePauseEvent += Menu_TogglePauseEvent;
-        _menuController.ChangeLocaleEvent += Menu_ChangeLocaleVent;
+        _menuController.StartGameEvent += MenuController_StartGameEvent;
+        _menuController.TogglePauseEvent += MenuController_TogglePauseEvent;
+        _menuController.ChangeLocaleEvent += MenuController_ChangeLocaleVent;
+        CursorChangeTrigger.CursorChangeEvent += CursorChangeTrigger_CursorChangeEvent;
     }
 
     void OnDisable() 
     {
         PuzzlePieceController.PuzzlePieceDraggedEvent -= PuzzlePieceController_PuzzlePieceDraggedEvent;
-        _menuController.StartGameEvent -= Menu_StartGameEvent;
-        _menuController.TogglePauseEvent -= Menu_TogglePauseEvent;
+        _menuController.StartGameEvent -= MenuController_StartGameEvent;
+        _menuController.TogglePauseEvent -= MenuController_TogglePauseEvent;
+        CursorChangeTrigger.CursorChangeEvent -= CursorChangeTrigger_CursorChangeEvent;
     }
 
     void Update() 
@@ -59,18 +62,29 @@ public class GameManager : MonoBehaviour
         Time.timeScale = paused?0:1;
         _menuController.ToggleMenuVisibility(paused);
         _puzzlePiecesCanvasGroup.alpha = paused?0:1;
+
+        if (!paused) ChangeCursor(false);
+    }
+
+    void ChangeCursor(bool hoverCursor)
+    {   
+        if (_hoverCursorTexture != null)
+        {
+            var texture = hoverCursor?_hoverCursorTexture:_defaultCursorTexture;
+            Cursor.SetCursor(texture, Vector2.zero,CursorMode.Auto);
+        }
     }
 
     void PuzzlePieceController_PuzzlePieceDraggedEvent(bool dragging) => DraggingPuzzlePiece = dragging;
     
-    void Menu_TogglePauseEvent(bool paused) => TogglePause(paused);
+    void MenuController_TogglePauseEvent(bool paused) => TogglePause(paused);
 
-    void Menu_ChangeLocaleVent(int localeIdx)
+    void MenuController_ChangeLocaleVent(int localeIdx)
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeIdx];
     }
 
-    void Menu_StartGameEvent() 
+    void MenuController_StartGameEvent() 
     {   
         TogglePause(false);
 
@@ -84,4 +98,6 @@ public class GameManager : MonoBehaviour
             _firstMapCover.GetComponent<MapCoverController>().FadeOut();
         }
     }
+
+    void CursorChangeTrigger_CursorChangeEvent(bool hoverCursor) => ChangeCursor(hoverCursor);
 }
