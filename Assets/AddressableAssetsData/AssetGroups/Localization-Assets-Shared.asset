@@ -20,21 +20,24 @@ MonoBehaviour:
   - m_GUID: 36c5cb5cf0c36814aad3ced6bbd91ca9
     m_Address: Localization Shared Data
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 11400000, guid: 36c5cb5cf0c36814aad3ced6bbd91ca9, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 36c5cb5cf0c36814aad3ced6bbd91ca9, type: 2}
   - m_GUID: 4680290fce9d3454cad5ac67af295700
     m_Address: StringTable Shared Data
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 11400000, guid: 4680290fce9d3454cad5ac67af295700, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 4680290fce9d3454cad5ac67af295700, type: 2}
   - m_GUID: 5901b6ae4bbb6ec4c908038b1fba7275
     m_Address: MenuStringTable Shared Data
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 11400000, guid: 5901b6ae4bbb6ec4c908038b1fba7275, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 5901b6ae4bbb6ec4c908038b1fba7275, type: 2}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6cd94865e9de43540885104973457d84, type: 2}
   m_SchemaSet:
