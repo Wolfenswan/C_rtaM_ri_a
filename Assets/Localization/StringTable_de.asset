@@ -148,9 +148,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - id: 0
+  - m_Id: 29348157750095872
+    m_Localized: "<b>Herzlichen Gl\xFCckwunsch!</b>\nDu hast alle R\xE4tsel gel\xF6st,
+      die wir in diesen kleinen Prototypen eingebaut haben.\nWir hoffen, dass du
+      beim Spielen so viel Spa\xDF hattest wie wir beim Basteln.\n\nBei Fragen kontaktiere
+      uns gerne \xFCber itch.io!\n\n- Arne, Anna, Laura & Markus"
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a20000000055501ba200000000d53e1ea20000000015c021a20000000055e626a200000000d59e2aa2000000b0818601000000
+        m_Entries: 00b081dd3a0100000000158391a100000000556ca8a1000000009595d8a10000000055bfe7a100000000156dffa10000000055f30ca200000000151e16a20000000055501ba200000000d53e1ea20000000015c021a20000000055e626a200000000d59e2aa2000000b081860100000000b08175fe436800

@@ -1,16 +1,12 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using NEINGames.Utilities;
 
 public class CameraController : MonoBehaviour
 {
     [SerializeField] CartaData _data;
-    //[SerializeField] HintBoxController _hintBox;
 
     Camera _cam;
-    HanseGameJam.RangeInt _zoomClamp;
+    NEINGames.Collections.RangeInt _zoomClamp;
     Vector3 _dragStartingPoint;
 
     void Awake() 
@@ -55,7 +51,6 @@ public class CameraController : MonoBehaviour
         if (buttonDown || buttonHeld && GameManager.GameInProgess && !GameManager.DraggingPuzzlePiece && !RaycastUtilities.IsPoint2DOverElementWithTag(cursorPos, "UIPuzzlePanel")) // IsPointerOverUIElement(cursorPos)
         {
             PanCamera(buttonDown, buttonHeld, cursorWorldPos);
-            //if (_hintBox.IsVisible) _hintBox.ToggleHintBoxVisibility(false); // TODO test if this is actually desireable
         }
     }
 

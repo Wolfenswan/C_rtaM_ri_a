@@ -12,11 +12,14 @@ public class MenuController : MonoBehaviour
 
     [SerializeField] GameObject _menuCanvas;
     [SerializeField] GameObject _continueButton;
+    [SerializeField] GameObject _quitButton;
 
     void Awake() 
     {
-        //_pausebutton = _menu.transform.Find("Buttons").Find("ButtonContinue").gameObject; //* Ugly. Improve when time
         _continueButton.SetActive(false);
+
+        if (Application.platform == RuntimePlatform.WebGLPlayer) // Application.Quit doesn't work properly in WebGL so we just hide the button
+            _quitButton.SetActive(false);
     }
 
     public void ToggleMenuVisibility(bool show)

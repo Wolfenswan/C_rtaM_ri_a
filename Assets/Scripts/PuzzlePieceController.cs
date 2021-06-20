@@ -5,13 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization;
 
-//! TODO Rename to XYController for consistency (DragDrop* or Piece*)
 public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {  
     public static event Action<bool> PuzzlePieceDraggedEvent;
     public static event Action<string, bool> ToggleHintEvent;
     public event Action<GameObject> PuzzlePieceSlottedEvent;
-    //public static event Action<GameObject> HintBoxToggled; // // ! Todo dedicated hintbox Controller that receives the string for the hint via event or method
     
     [HideInInspector] public bool DroppedInSlot;
 
@@ -67,7 +65,7 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     
     void UpdateLocalizedString(string newString) => _localizedHintText = newString;
     
-    #region onPointer Methods
+    #region onPointer methods
     public void OnPointerEnter(PointerEventData pointerEventData) => ToggleGlow(true);
     public void OnPointerExit(PointerEventData pointerEventData) => ToggleGlow(false);
 
@@ -99,7 +97,7 @@ public class PuzzlePieceController : MonoBehaviour, IPointerClickHandler, IBegin
     }
     #endregion
 
-    public void FadeIn() => StartCoroutine(FadeInPiece());
+    //public void FadeIn() => StartCoroutine(FadeInPiece());
 
     IEnumerator OnDroppedCoroutine()
     {

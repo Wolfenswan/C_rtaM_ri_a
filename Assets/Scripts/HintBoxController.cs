@@ -1,62 +1,54 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Localization;
 using TMPro;
 
 public class HintBoxController : MonoBehaviour 
 {   
-    public bool IsVisible{get=>_canvasGroup.alpha==1;}
-    public string CurrentText{get=>_localizedHintText;}
-
-    [SerializeField] LocalizedString _localizedString;
+    [SerializeField] LocalizedString _localizedHintString;
+    [SerializeField] LocalizedString _localizedWonString;
     [SerializeField] TextMeshProUGUI _textField;
     [SerializeField] GameObject _textContainer;
     [SerializeField] GameObject _hintBoxButton;
-    string _localizedHintText;
+    string _currentLocalizedText;
     CanvasGroup _canvasGroup;
     CanvasGroup _hintBoxButtonCanvasGroup;
-    string _localizedButtonText;
     readonly float _hintBoxButtonDisabledAlpha = 0.7f;
 
     void Awake() 
     {
         _canvasGroup = GetComponent<CanvasGroup>();
         _hintBoxButtonCanvasGroup = _hintBoxButton.GetComponent<CanvasGroup>();
-        //_hintBoxButton.SetActive(false);
-        //_textField = transform.Find("HintText").GetComponent<TextMeshProUGUI>();
     }
 
     void OnEnable()
     {
         PuzzlePieceController.ToggleHintEvent += PuzzlePieceController_ToggleHintEvent;
-        _localizedString.StringChanged += UpdateLocalizedString;
+        MapCoverController.GameWonEvent += MapCoverController_GameWonEvent;
+        _localizedHintString.StringChanged += UpdateLocalizedString;
     }
 
     void OnDisable() 
     {
         PuzzlePieceController.ToggleHintEvent -= PuzzlePieceController_ToggleHintEvent;
-        _localizedString.StringChanged -= UpdateLocalizedString;
+        MapCoverController.GameWonEvent -= MapCoverController_GameWonEvent;
+        _localizedHintString.StringChanged -= UpdateLocalizedString;
     }
 
     void ToggleHintBoxVisibility(bool enable) 
     {
-        //_canvasGroup.alpha = enable?1:0;
         _textContainer.SetActive(enable);
 
-        if (enable && _textField.text != _localizedHintText || !enable)
+        if (enable && _textField.text != _currentLocalizedText) // Keep showing the hint canvas if only the hint text was changed
             _hintBoxButtonCanvasGroup.alpha = 1;
-        else if (enable && _textField.text == _localizedHintText)
+        else if (enable && _textField.text == _currentLocalizedText)
             _hintBoxButtonCanvasGroup.alpha = _hintBoxButtonDisabledAlpha;
-        //_hintBoxButton.SetActive(!enable);
     }
 
     void UpdateLocalizedString(string newString)
     {   
-        // If the locale changes the HintBox will be forced to display the starter hint again (in the new language)
-        _localizedHintText = newString;
-        _textField.text = _localizedHintText;
-        ToggleHintBoxVisibility(true);
+        _currentLocalizedText = newString;
+        _textField.text = _currentLocalizedText;
+        ToggleHintBoxVisibility(true);  // If the locale changes the HintBox will be forced to display the starter hint again (in the new language)
     } 
 
     void PuzzlePieceController_ToggleHintEvent(string hintText, bool forceDisable = false) 
@@ -74,11 +66,17 @@ public class HintBoxController : MonoBehaviour
         }        
     }
 
+    void MapCoverController_GameWonEvent()
+    {
+        _textField.text = _localizedWonString.GetLocalizedString();
+        ToggleHintBoxVisibility(true);
+    }
+
     public void ButtonToggleHintBox()
     {   
-        if (_textField.text != _localizedHintText || !_textContainer.activeSelf)
+        if (_textField.text != _currentLocalizedText || !_textContainer.activeSelf)
         {
-            _textField.text = _localizedHintText;
+            _textField.text = _currentLocalizedText;
             ToggleHintBoxVisibility(true);
         } else 
         {

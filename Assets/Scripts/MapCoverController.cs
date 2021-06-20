@@ -7,22 +7,18 @@ using System.Linq;
 public class MapCoverController : MonoBehaviour
 {
     public static event Action<GameObject> MapCoverRevealedEvent;
+    public static event Action GameWonEvent;
 
     [SerializeField] CartaData _data;
     [SerializeField] int _maxZoomAfterReveal = 20;
     [SerializeField] List<GameObject> _piecesRequired;
     [SerializeField] List<GameObject> _piecesToReveal;
+    [SerializeField] bool _finalCover;
 
     public int MaxZoom{get=>_maxZoomAfterReveal;}
 
     SpriteRenderer _spriteRenderer;
     bool _fading = false;
-
-    // void Update() 
-    // {   
-    //     if (_piecesRequired.Count(obj => obj.activeSelf) == 0)
-    //         FadeOut();
-    // }
 
     void Awake() 
     {
@@ -51,7 +47,13 @@ public class MapCoverController : MonoBehaviour
         var controller = piece.GetComponent<PuzzlePieceController>();
         controller.PuzzlePieceSlottedEvent -= PuzzlePiece_PuzzlePieceSlottedEvent;
         if (_piecesRequired.Count(obj => !obj.GetComponent<PuzzlePieceController>().DroppedInSlot) == 0)
-            FadeOut();
+        {
+            if (!_finalCover)
+                FadeOut();
+            else
+                GameWonEvent?.Invoke();
+        }
+            
     }
 
     IEnumerator FadeOutCover() // CONSIDER - write a generic utility DoOverTime-method accepting a Func<> or delegate

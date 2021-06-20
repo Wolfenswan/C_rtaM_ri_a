@@ -75,6 +75,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void WinGame()
+    {
+        
+    }
+
     void PuzzlePieceController_PuzzlePieceDraggedEvent(bool dragging) => DraggingPuzzlePiece = dragging;
     
     void MenuController_TogglePauseEvent(bool paused) => TogglePause(paused);

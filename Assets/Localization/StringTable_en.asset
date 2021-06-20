@@ -172,6 +172,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - id: 0
+  - m_Id: 29348157750095872
+    m_Localized: "<b>Congratulations!\r</b>\nYou solved all the puzzles we built
+      into this little prototype.\r\nWe hope you had as much fun playing as we had
+      making it.\r\n\r\nIf you have any questions, feel free to contact us via itch.io!\r\n\r\n-
+      Arne, Anna, Laura & Markus"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
     00000000:
