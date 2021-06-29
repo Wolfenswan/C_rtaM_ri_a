@@ -3,6 +3,6 @@ Picture puzzle game made during [Game Jam Hanse](https://www.hansemuseum.eu/game
 
 Based on [Carta Marina by Olaus Magnus](https://en.wikipedia.org/wiki/Carta_marina) (~1539).
 
-The full release (work-in-progress) can be found on [itch.io](https://wolfenswan.itch.io/hanse-game-jam-2021-carta-marina). Third party assets are also listed on the itch.io page.
+The full release can be found on [itch.io](https://wolfenswan.itch.io/carta-marina). Third party assets are also listed on the itch.io page.
 
-Made on 27. & 28. of March 2021, by Anna, Arne, Laura and myself.
+Initial jam version made over 27. & 28. of March 2021, by Anna, Arne, Laura and myself.
